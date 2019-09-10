@@ -40,7 +40,7 @@
         <nav class="interaction">
           <ul>
             <li class="up">UP</li>
-            <li class="down">DOWN</li>
+            <li class="down">DOWNjuanpi</li>
             <li class="share">SHARE</li>
             <li class="options">OPTIONS</li>
           </ul>
