@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("../images/wood.jpg");
+}
+
+ul, ol{
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.header .main .footer{
+  display: block;
+  background-color: red;
+  width: 100%;
+}
+
+.header{
+  overflow: hidden;
+}
+
+.lupa{
+  float:left;
+}
+
+.login{
+  float:right;
+  padding: 3px;
+}
+
+.post{
+  overflow: hidden;
+}
+
+.user{
+  float: left;
+}
+
+.user{
+  overflow: hidden;
+}
+
+.user_img{
+  float: left;
+}
+
+.user_name{
+  float: left;
+}
+
+.main_img{
+  width: 100%;
+}
