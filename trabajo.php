@@ -21,13 +21,9 @@
     </header>
     <main>
       <?php
-<<<<<<< HEAD
 
-            //holaasd
-=======
-        //hola
 
->>>>>>> master
+            
 
       ?>
       <nav class="post">
