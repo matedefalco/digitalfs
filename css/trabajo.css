@@ -35,10 +35,14 @@ a{
 
 .post{
   overflow: hidden;
+  width: 100%;
 }
 
 .user{
   float: left;
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
 }
 
 .user{

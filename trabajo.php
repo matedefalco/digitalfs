@@ -20,11 +20,16 @@
       </nav>
     </header>
     <main>
+      <?php
+
+
+
+      ?>
       <nav class="post">
         <nav class="user">
           <nav class="user_img">
             <a href="#">
-              <img src="" alt="">
+              <img src="images/blue.jpg" alt="blueimage">
             </a>
           </nav>
           <nav class="user_name">
@@ -35,12 +40,12 @@
           </nav>
         </nav>
         <nav class="main_img">
-          <img src="" alt="">
+          <img src="images/orange.png" alt="orangeorange">
         </nav>
         <nav class="interaction">
           <ul>
             <li class="up">UP</li>
-            <li class="down">DOWNjuanpi</li>
+            <li class="down">DOWN</li>
             <li class="share">SHARE</li>
             <li class="options">OPTIONS</li>
           </ul>
