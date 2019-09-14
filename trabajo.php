@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/trabajo.css">
     <title>Trabajo Final</title>
@@ -21,10 +22,11 @@
     </header>
     <main>
       <nav class="post">
-        <nav class="user">
-          <nav class="user_img">
+        <nav class="user w-50 p-3">
+          <nav class="user_img w-25 p-3">
+            <!-- Le quise poner que la imagen tuviera un 25%de ancho ya que a la caja padre la puse 50... de forma que fuera 25% foto y 25% texto pero la foto se esconde y el texto de al lado no flota -->
             <a href="#">
-              <img src="" alt="">
+              <img class="rounded-circle" src="images/download.jpeg" alt="">
             </a>
           </nav>
           <nav class="user_name">
@@ -35,25 +37,47 @@
           </nav>
         </nav>
         <nav class="main_img">
-          <img src="" alt="">
+          <img src="images/foto.jpeg" class="w-100 p-3 pr-0 pl-0" alt="Responsive image">
+          <!-- Puse que la foto ocupara el 100% de la imagen y me aparecia un padding en todas direcciones que intente sacar pero no me deja -->
+          <?php "etiquetas de la foto" ?>
         </nav>
-        <nav class="interaction">
-          <ul>
-            <li class="up">UP</li>
-            <li class="down">DOWN</li>
-            <li class="share">SHARE</li>
-            <li class="options">OPTIONS</li>
+        <nav>
+          <ul class="list-group list-group-horizontal interaction">
+            <li class="up list-group-item">
+              <a href="#"><i class="fa fa-angle-double-up"></i></a>
+            </li>
+            <li class="down list-group-item">
+              <a href="#"><i class="fa fa-angle-double-down"></i></a>
+            </li>
+            <li class="share list-group-item">
+              <a href="#"><i class="fa fa-share-square"></i></a>
+            </li>
+            <li class="options list-group-item">
+              <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+            </li>
           </ul>
         </nav>
       </nav>
     </main>
-    <footer>
-      <ul>
-        <li class="home"></li>
-        <li class="stock"></li>
-        <li class="add"></li>
-        <li class="chat"></li>
-        <li class="profile"></li>
+    <footer class="position-relative">
+      <!-- A la caja padre le pongo position relative de bootstrap para poder ponerle fixed abajo -->
+      <ul class="w-100 p-3  fixed-bottom">
+        <!-- Uso position fixed bottom para que baje a medid que el usuario navega en la pagina pero aparece chico y a un costado -->
+        <li class="home">
+          <a href="#"><i class="fa fa-home"></i></a>
+        </li>
+        <li class="stock">
+          <a href="#"><i class="fa fa-images"></i></a>
+        </li>
+        <li class="add">
+          <a href="#"><i class="fa fa-plus-circle"></i></a>
+        </li>
+        <li class="chat">
+          <a href="#"><i class="fa fa-comment-dots"></i></a>
+        </li>
+        <li class="profile">
+          <a href="#"><i class="fa fa-user-alt"></i></a>
+        </li>
       </ul>
     </footer>
     <!-- Optional JavaScript -->

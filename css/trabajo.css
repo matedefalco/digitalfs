@@ -14,8 +14,7 @@ a{
   text-decoration: none;
 }
 
-header main footer{
-  color: red;
+.header .main .footer{
   width: 100%;
 }
 
@@ -33,25 +32,34 @@ header main footer{
 }
 
 .post{
-  overflow: hidden;
-}
-
-.user{
-  float: left;
+  margin-bottom: 10px;
 }
 
 .user{
   overflow: hidden;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .user_img{
   float: left;
+  display: block;
+  width: 25px;
+  height: 25px;
 }
 
 .user_name{
-  float: left;
+  float: right  ;
 }
 
 .main_img{
-  width: 100%;
+  margin-bottom: 5px;
+}
+
+.interaction{
+
+}
+
+.up .down .share .options{
+  list-style: none;
 }
