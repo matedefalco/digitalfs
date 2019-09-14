@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-      <nav clas="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light top">
         <input class="lupa" type="search" name="lupa" value="">
         <a class="login" href="login.php">
           <button type="button" class="btn btn-primary">LOGIN</button>

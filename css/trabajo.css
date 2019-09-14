@@ -14,13 +14,12 @@ a{
   text-decoration: none;
 }
 
-.header .main .footer{
-  display: block;
-  background-color: red;
+header main footer{
+  color: red;
   width: 100%;
 }
 
-.header{
+.top{
   overflow: hidden;
 }
 
