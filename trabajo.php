@@ -21,6 +21,12 @@
       </nav>
     </header>
     <main>
+      <?php
+
+
+
+
+      ?>
       <nav class="post">
         <nav class="user w-50 p-3">
           <nav class="user_img w-25 p-3">
