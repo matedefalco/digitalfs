@@ -65,23 +65,23 @@
         </nav>
       </nav>
     </main>
-    <footer class="position-relative">
+    <footer class="position-relative navbar navbar-light bg-light" role="navigation">
       <!-- A la caja padre le pongo position relative de bootstrap para poder ponerle fixed abajo -->
       <ul class="w-100 p-3  fixed-bottom">
         <!-- Uso position fixed bottom para que baje a medid que el usuario navega en la pagina pero aparece chico y a un costado -->
-        <li class="home">
+        <li class="navbar-brand home">
           <a href="#"><i class="fa fa-home"></i></a>
         </li>
-        <li class="stock">
+        <li class="navbar-brand stock">
           <a href="#"><i class="fa fa-images"></i></a>
         </li>
-        <li class="add">
+        <li class="navbar-brand add">
           <a href="#"><i class="fa fa-plus-circle"></i></a>
         </li>
-        <li class="chat">
+        <li class="navbar-brand chat">
           <a href="#"><i class="fa fa-comment-dots"></i></a>
         </li>
-        <li class="profile">
+        <li class="navbar-brand profile">
           <a href="#"><i class="fa fa-user-alt"></i></a>
         </li>
       </ul>
