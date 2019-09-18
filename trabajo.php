@@ -12,7 +12,21 @@
   </head>
   <body>
     <?php
+    function OpenCon()
+     {
+     $dbhost = "localhost";
+     $dbuser = "juanpi";
+     $dbpass = "223554504";
+     $db = "pf";
+     $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
 
+     return $conn;
+     }
+
+    function CloseCon($conn)
+     {
+     $conn -> close();
+     }
 
     ?>
     <header>
@@ -23,8 +37,17 @@
         </a>
       </nav>
     </header>
-
     <?php
+    $conn = OpenCon();
+    $sql = "INSERT INTO users (username, password, email, nombre, apellido, edad, sexo, dni, direccion, piso, cuit)
+    VALUES ('mateoooo', '', 'mateo@example.com','mateo','mateote',20,12345678,'su casa','su pis0o',12345678910)";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
     $username = [];
     $userimg = [];
     $mainimg = [];
