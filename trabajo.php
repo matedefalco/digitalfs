@@ -23,18 +23,37 @@
         </a>
       </nav>
     </header>
+
+    <?php
+    $username = [];
+    $userimg = [];
+    $mainimg = [];
+    $mainimg[] = "orange.png";
+    $mainimg[] = "foto.jpeg";
+    $mainimg[] = "blue.jpg";
+    $userimg[] = "user1.jpg";
+    $userimg[] = "user2.jpg";
+    $userimg[] = "user3.jpg";
+    $username[] = "xXX_DestroyerOfSouls_XXx";
+    $username[] = "Bon’Quisha";
+    $username[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
+    //hay que rellenar cada uno con mysql
+    for($i = 0;$i < count($mainimg); $i++){
+
+     ?>
+
     <main>
       <nav class="post">
         <nav class="user">
-          <img class="user_img" src="images/download.jpeg" alt="">
+          <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
           <div class="user_name">
             <a href="#">
-              USER NAME
+              <?php echo $username[$i]; ?>
             </a>
           </div>
         </nav>
         <nav class="main_img">
-          <img src="images/foto.jpeg" class="" alt="Responsive image">
+          <img src="images/<?php echo $mainimg[$i]; ?>" class="" alt="main image">
         </nav>
         <nav>
           <ul class="">
@@ -54,6 +73,7 @@
         </nav>
       </nav>
     </main>
+  <?php } ?>
 
     <footer class="">
       <!-- A la caja padre le pongo position relative de bootstrap para poder ponerle fixed abajo -->
