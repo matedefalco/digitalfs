@@ -30,8 +30,8 @@
 
     ?>
     <header>
-      <nav class="">
-        <input class="lupa" type="search" name="lupa" value="">
+      <nav class="cabecera">
+        <input class="lupa" placeholder="Buscar" type="search" name="lupa" value="">
         <a class="login" href="login.php">
           <button type="button">LOGIN</button>
         </a>
@@ -79,7 +79,7 @@
           <img src="images/<?php echo $mainimg[$i]; ?>" class="" alt="main image">
         </nav>
         <nav>
-          <ul class="">
+          <ul class="qualify">
             <li class="up">
               <a href="#"><i class="fa fa-angle-double-up"></i></a>
             </li>
@@ -97,25 +97,22 @@
       </nav>
     </main>
   <?php } ?>
-
     <footer class="">
-      <!-- A la caja padre le pongo position relative de bootstrap para poder ponerle fixed abajo -->
       <ul class="nav_final">
-        <!-- Uso position fixed bottom para que baje a medid que el usuario navega en la pagina pero aparece chico y a un costado -->
         <li class="barra home">
           <a href="#"><i class="fa fa-home"></i></a>
         </li>
         <li class="barra stock">
-          <a href="#"><i class="fa fa-images"></i>></a>
+          <a href="#"><i class="fa fa-image"></i></a>
         </li>
         <li class="barra add">
           <a href="#"><i class="fa fa-plus-circle"></i></a>
         </li>
         <li class="barra chat">
-          <a href="#"><i class="fa fa-comment-dots"></i></a>
+          <a href="#"><i class="fa fa-comment"></i></a>
         </li>
         <li class="barra profile">
-          <a href="#"><i class="fa fa-user-alt"></i></a>
+          <a href="#"><i class="fa fa-user"></i></a>
         </li>
       </ul>
     </footer>

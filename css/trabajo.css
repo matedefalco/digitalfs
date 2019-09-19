@@ -3,8 +3,8 @@
 }
 
 body{
-  background-image: url("../images/background.jpg");
   margin: 0px;
+  background-color: white;
 }
 
 ul {
@@ -14,11 +14,25 @@ ul {
   overflow: hidden;
 }
 
+.qualify{
+  margin-left: 1%;
+}
+
 li {
   float: left;
-  padding: 2.35%;
+  padding: 2%;
   border: solid 1px;
   background-color: #e7d9ec;
+}
+
+.options{
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+.up{
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
 }
 
 a{
@@ -28,7 +42,7 @@ a{
 button{
   background-color: #3b54da;
   color: white;
-  padding: 3%;
+  padding: 5%;
   border: solid 1px white;
   border-radius: 15%;
 
@@ -38,18 +52,25 @@ button{
   width: 100%;
 }
 
+.cabecera{
+  border: solid 1px;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+}
+
 .top{
   overflow: hidden;
 }
 
 .lupa{
   float:left;
-  margin-top: 1.15%;
+  margin: 1.15%;
 }
 
 .login{
   float:right;
-  padding: 0.7%;
+  margin: 1.15%;
 }
 
 .post{
@@ -103,6 +124,10 @@ footer{
 
 .barra{
   width: 20%;
+}
+
+.fa{
+  sizing: 2%;
 }
 
 .up .down .share .options{
