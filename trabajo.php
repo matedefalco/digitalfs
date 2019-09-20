@@ -39,8 +39,8 @@
     </header>
     <?php
     $conn = OpenCon();
-    $sql = "INSERT INTO users (username, password, email, nombre, apellido, edad, sexo, dni, direccion, piso, cuit)
-    VALUES ('mateoooo', '', 'mateo@example.com','mateo','mateote',20,'masculino',12345678,'su casa','su pis0o',12345678910)";
+    // $sql = "INSERT INTO users (username, password, email, nombre, apellido, edad, sexo, dni, direccion, piso, cuit)
+    // VALUES ('mateoooo', '', 'mateo@example.com','mateo','mateote',20,'masculino',12345678,'su casa','su pis0o',12345678910)";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
@@ -96,7 +96,10 @@
         </nav>
       </nav>
     </main>
+    <br>
   <?php } ?>
+  <br>
+  <br>
     <footer class="">
       <ul class="nav_final">
         <li class="barra home">
