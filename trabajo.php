@@ -1,4 +1,4 @@
-<!doctype html>
+<?php include("./codigo.php"); ?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -12,21 +12,7 @@
   </head>
   <body>
     <?php
-    function OpenCon()
-     {
-     $dbhost = "localhost";
-     $dbuser = "juanpi";
-     $dbpass = "223554504";
-     $db = "pf";
-     $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
 
-     return $conn;
-     }
-
-    function CloseCon($conn)
-     {
-     $conn -> close();
-     }
 
     ?>
     <header>
@@ -43,11 +29,11 @@
     <?php
     $conn = OpenCon();
 
-    if ($conn->query($sql) === TRUE) {
+    /* if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    } */
 
     $username = [];
     $userimg = [];

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include("./codigo.php"); ?>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -46,33 +46,20 @@
 				<input type="radio" name="hm" value="o"> Otro
 	      <input type="submit" value="Registrate" class="button">
 	      <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-	      <p>¿Ya tienes una cuenta?<a class="link" href="login.html">Iniciar Sesion</a></p>
+	      <p>¿Ya tienes una cuenta?<a class="link" href="login.php">Iniciar Sesión</a></p>
 
 	     </div>
     </form>
 
 		<?php
-		function OpenCon()
-		{
-			$dbhost = "localhost";
-			$dbuser = "juanpi";
-			$dbpass = "223554504";
-			$db = "pf";
-			$conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
-
-			return $conn;
+		if(!empty($_POST["pass"])){
+			$hashedpass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
 		}
+		if(!empty($_POST["username"]) && !empty($_POST["nombre"]) && !empty($_POST["apellido"]) && !empty($_POST["email"]) && !empty($hashedpass) && !empty($_POST["hm"])){
+			$conn = OpenCon();
 
-    function CloseCon($conn)
-		{
-			$conn -> close();
-		}
-
-		$conn = OpenCon();
-
-		if(!empty($_POST["username"]) && !empty($_POST["nombre"]) && !empty($_POST["apellido"]) && !empty($_POST["email"]) && !empty($_POST["pass"]) && !empty($_POST["hm"])){
 			$sql = "INSERT INTO users (username, password, email, nombre, apellido, sexo)
-	  	VALUES ('$_POST[username]', '$_POST[pass]', '$_POST[email]', '$_POST[nombre]', '$_POST[apellido]', '$_POST[hm]')";
+	  	VALUES ('$_POST[username]', '$hashedpass', '$_POST[email]', '$_POST[nombre]', '$_POST[apellido]', '$_POST[hm]')";
 
 			if ($conn->query($sql) === TRUE) {
 	        echo "New record created successfully";
@@ -81,7 +68,6 @@
 	    }
 
 		}
-
 		?>
 </body>
 </html>
