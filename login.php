@@ -41,8 +41,7 @@
 		$query = $conn->prepare("SELECT password FROM users WHERE email = '$email' ");
 		$query2 = $query->execute();
 		$hashedpass = $query->fetch(PDO::FETCH_ASSOC);
-		var_dump($hashedpass, $query2);
-		if(password_verify($pass, $hashedpass)){
+		if(password_verify($pass, $hashedpass["password"])){
 			echo "LOGUEADO";
 		}
 		?>

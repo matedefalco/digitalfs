@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2019 at 04:40 AM
+-- Generation Time: Sep 23, 2019 at 12:00 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -48,7 +48,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `password`, `email`, `nombre`, `apellido`, `edad`, `sexo`, `dni`, `direccion`, `piso`, `cuit`) VALUES
-(1, 'juanpi', '', 'juanpi999@hotmail.com', 'juan pablo', 'rodriguez acevedo', 21, 'masculino', 40830128, 'heredia 1080', 'timbre izq', 24408301284);
+(19, 'juanpi999', '$2y$10$wMojR2jCASmsvjvnaFNp..mwutGirvGY8woHzscEIg/gQdf4Oz7Wm', 'juanprueba@gmail.com', 'juanprueba', 'probando', 0, 'h', 0, '', '', 0),
+(22, 'hola123', '$2y$10$QSST.m3jSDChbZqXcJGmHuUUageEu.Q.IPcugMJ6tTb02FBVSFJrq', 'hola123@hotmail.com', 'hola', '123', 0, 'h', 0, '', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +69,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

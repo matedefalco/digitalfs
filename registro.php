@@ -58,10 +58,10 @@
 		if(!empty($_POST["username"]) && !empty($_POST["nombre"]) && !empty($_POST["apellido"]) && !empty($_POST["email"]) && !empty($hashedpass) && !empty($_POST["hm"])){
 			$conn = OpenCon();
 
-			$sql = "INSERT INTO users (username, password, email, nombre, apellido, sexo)
-	  	VALUES ('$_POST[username]', '$hashedpass', '$_POST[email]', '$_POST[nombre]', '$_POST[apellido]', '$_POST[hm]')";
+			$query = $conn->prepare("INSERT INTO users (username, password, email, nombre, apellido, sexo)
+	  	VALUES ('$_POST[username]', '$hashedpass', '$_POST[email]', '$_POST[nombre]', '$_POST[apellido]', '$_POST[hm]')");
 
-			if ($conn->query($sql) === TRUE) {
+			if ($query2 = $query->execute() === TRUE) {
 	        echo "New record created successfully";
 	    } else {
 	        echo "Error: " . $sql . "<br>" . $conn->error;
