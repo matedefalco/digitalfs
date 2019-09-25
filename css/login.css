@@ -1,13 +1,23 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: url(imagen.jpg);
+    background-image: url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
+
 * {
     box-sizing: border-box;
 }
+
+h6{
+  padding: 0;
+  margin: 0;
+color: red;
+font-size: 13px;
+text-align: center;
+}
+
 .contenedor{
     width: 100%;
     padding: 15px;
