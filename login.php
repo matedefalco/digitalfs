@@ -15,10 +15,9 @@ if($_POST){
 			$query2 = $query->execute();
 			$hashedpass = $query->fetch(PDO::FETCH_ASSOC);
 			if(password_verify($_POST["pass"], $hashedpass["password"])){
-					header("Location:trabajo.php");
+				header("Location:trabajo.php");
+					//aca hay que hacer el login
 				exit;
-				//agregar que se HAGA el login, con session
-				echo "LOGUEADO";
 			}
 		}
 	}
