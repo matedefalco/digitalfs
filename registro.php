@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "./codigo.php";
+include "functions.php";
 include "classes/user.php";
 include "classes/mysql.php";
 
@@ -10,18 +10,7 @@ if($_POST){
 
   if(!$errores){
     $usuario = crearUsuario();
-  	$conn = OpenCon();
-
-		$query = $conn->prepare("INSERT INTO users (username, password, email, nombre, apellido, sexo)
-		VALUES ('$usuario[username]', '$usuario[password]', '$usuario[email]', '$usuario[nombre]', '$usuario[apellido]', '$usuario[sexo]')");
-
-		if ($query2 = $query->execute() === TRUE) {
-				//agregar que se HAGA el login, con session
-				header("Location:trabajo.php");
-				exit;
-		} else {
-				echo "Error: " . $sql . "<br>" . $conn->error;
-		}
+    guardarUsuario($usuario);
   }
 }
 ?>

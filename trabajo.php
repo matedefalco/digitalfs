@@ -1,8 +1,8 @@
 <?php
-session_start();
-include "./codigo.php";
+include "auth.php";
 include "classes/user.php";
 include "classes/mysql.php";
+include "functions.php";
 
 ?>
 <html lang="en">

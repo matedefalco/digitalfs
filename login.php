@@ -1,27 +1,35 @@
 <?php
-session_start();
-include "./codigo.php";
+include "auth.php";
 include "classes/user.php";
 include "classes/mysql.php";
+include "functions.php";
+
+if(usuarioLogueado()){
+	header("Location:trabajo.php");
+	exit;
+}
 
 $errores = [];
 if($_POST){
 	$errores = validarinput($_POST, "login");
 
 	if(!$errores){
-		$conn = OpenCon();
-		if(!empty($_POST["email"]) && !empty($_POST["pass"])){
-			$email = $_POST["email"];
-			$conn = OpenCon();
-			$query = $conn->prepare("SELECT password FROM users WHERE email = '$email' ");
-			$query2 = $query->execute();
-			$hashedpass = $query->fetch(PDO::FETCH_ASSOC);
-			if(password_verify($_POST["pass"], $hashedpass["password"])){
-				header("Location:trabajo.php");
-					//aca hay que hacer el login
-				exit;
-			}
-		}
+		loguearUsuario($email);
+		header("Location:trabajo.php");
+		exit;
+		// $conn = OpenCon();
+		// if(!empty($_POST["email"]) && !empty($_POST["pass"])){
+		// 	$email = $_POST["email"];
+		// 	$conn = OpenCon();
+		// 	$query = $conn->prepare("SELECT password FROM users WHERE email = '$email' ");
+		// 	$query2 = $query->execute();
+		// 	$hashedpass = $query->fetch(PDO::FETCH_ASSOC);
+		// 	if(password_verify($_POST["pass"], $hashedpass["password"])){
+		// 		header("Location:trabajo.php");
+		// 			//aca hay que hacer el login
+		// 		exit;
+		// 	}
+		// }
 	}
 }
 ?>
@@ -60,9 +68,8 @@ if($_POST){
 			 		<?php endif ?>
 			 	 </small>
 			 </div>
-
+			 	<input type="checkbox" name="recordame" value="">
       	<input type="submit" value="Login" class="button">
-      	<p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
       	<p>¿No tienes una cuenta? <a class="link" href="registro.php">Registrate </a></p>
      	</div>
     </form>
