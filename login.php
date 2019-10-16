@@ -1,8 +1,10 @@
 <?php
-include("./codigo.php");
+session_start();
+include "./codigo.php";
+include "classes/user.php";
+include "classes/mysql.php";
+
 $errores = [];
-$usrenametrim = "";
-$emailtrim = "";
 if($_POST){
 	$errores = validarinput($_POST, "login");
 

@@ -1,9 +1,11 @@
-<?php include("./codigo.php");
-$errores = [];
-$usrenametrim = "";
-$emailtrim = "";
+<?php
+session_start();
+include "./codigo.php";
+include "classes/user.php";
+include "classes/mysql.php";
 
 if($_POST){
+  $errores = [];
   $errores = validarinput($_POST, "registro");
 
   if(!$errores){

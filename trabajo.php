@@ -1,4 +1,10 @@
-<?php include("./codigo.php"); ?>
+<?php
+session_start();
+include "./codigo.php";
+include "classes/user.php";
+include "classes/mysql.php";
+
+?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -27,14 +33,9 @@
       </nav>
     </header>
     <?php
-    $conn = OpenCon();
 
-    /* if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    } */
-
+//esto de aca es asqueroso y hay que cambiarlo eventualmente.
+//todo esto se reemplaza usando el objeto publicacion, que tiene obj comment
     $username = [];
     $userimg = [];
     $mainimg = [];
