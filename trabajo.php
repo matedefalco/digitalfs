@@ -14,7 +14,7 @@ include "functions.php";
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/trabajo.css">
-    <title>Trabajo Fimal</title>
+    <title>Trabajo Final</title>
   </head>
   <body>
     <?php
@@ -32,41 +32,80 @@ include "functions.php";
         </a>
       </nav>
     </header>
-    <?php
+    <main>
+      <?php
 
-//esto de aca es asqueroso y hay que cambiarlo eventualmente.
-//todo esto se reemplaza usando el objeto publicacion, que tiene obj comment
-    $username = [];
-    $userimg = [];
-    $mainimg = [];
-    $mainimg[] = "orange.png";
-    $mainimg[] = "foto.jpeg";
-    $mainimg[] = "blue.jpg";
-    $userimg[] = "user1.jpg";
-    $userimg[] = "user2.jpg";
-    $userimg[] = "user3.jpg";
-    $username[] = "xXX_DestroyerOfSouls_XXx";
-    $username[] = "Bon’Quisha";
-    $username[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
-    //hay que rellenar cada uno con mysql
+  //esto de aca es asqueroso y hay que cambiarlo eventualmente.
+  //todo esto se reemplaza usando el objeto publicacion, que tiene obj comment
+      $username = [];
+      $userimg = [];
+      $mainimg = [];
+      $mainimg[] = "orange.png";
+      $mainimg[] = "foto.jpeg";
+      $mainimg[] = "blue.jpg";
+      $userimg[] = "user1.jpg";
+      $userimg[] = "user2.jpg";
+      $userimg[] = "user3.jpg";
+      $username[] = "xXX_DestroyerOfSouls_XXx";
+      $username[] = "Bon’Quisha";
+      $username[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
+      //hay que rellenar cada uno con mysql
+      for($i = 0;$i < count($mainimg); $i++){
+
+       ?>
+
+      <article>
+        <div class="post">
+          <div class="user">
+            <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
+            <div class="user_name">
+              <a href="#">
+                <?php echo $username[$i]; ?>
+              </a>
+            </div>
+          </div>
+          <div class="main_img">
+            <img src="images/<?php echo $mainimg[$i]; ?>" class="" alt="main image">
+          </div>
+          <div class="likes">
+            <ul class="qualify">
+              <li class="up">
+                <a href="#"><i class="fa fa-angle-double-up"></i></a>
+              </li>
+              <li class="down">
+                <a href="#"><i class="fa fa-angle-double-down"></i></a>
+              </li>
+              <li class="share">
+                <a href="#"><i class="fa fa-share-square"></i></a>
+              </li>
+              <li class="options">
+                <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    <?php } ?>
+
+    <?php
     for($i = 0;$i < count($mainimg); $i++){
 
      ?>
 
-    <main>
-      <nav class="post">
-        <nav class="user">
+    <article>
+      <div class="post">
+        <div class="user">
           <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
           <div class="user_name">
             <a href="#">
               <?php echo $username[$i]; ?>
             </a>
           </div>
-        </nav>
-        <nav class="main_img">
+        </div>
+        <div class="main_img">
           <img src="images/<?php echo $mainimg[$i]; ?>" class="" alt="main image">
-        </nav>
-        <nav>
+        </div>
+        <div class="likes">
           <ul class="qualify">
             <li class="up">
               <a href="#"><i class="fa fa-angle-double-up"></i></a>
@@ -81,14 +120,52 @@ include "functions.php";
               <a href="#"><i class="fa fa-ellipsis-h"></i></a>
             </li>
           </ul>
-        </nav>
-      </nav>
-    </main>
-    <br>
+        </div>
+      </div>
+    </article>
   <?php } ?>
+
+  <?php
+  for($i = 0;$i < count($mainimg); $i++){
+
+   ?>
+
+  <article>
+    <div class="post">
+      <div class="user">
+        <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
+        <div class="user_name">
+          <a href="#">
+            <?php echo $username[$i]; ?>
+          </a>
+        </div>
+      </div>
+      <div class="main_img">
+        <img src="images/<?php echo $mainimg[$i]; ?>" class="" alt="main image">
+      </div>
+      <div class="likes">
+        <ul class="qualify">
+          <li class="up">
+            <a href="#"><i class="fa fa-angle-double-up"></i></a>
+          </li>
+          <li class="down">
+            <a href="#"><i class="fa fa-angle-double-down"></i></a>
+          </li>
+          <li class="share">
+            <a href="#"><i class="fa fa-share-square"></i></a>
+          </li>
+          <li class="options">
+            <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <?php } ?>
+</main>
   <br>
   <br>
-    <footer class="">
+    <footer class="bottom_nav">
       <ul class="nav_final">
         <li class="barra home">
           <a href="#"><i class="fa fa-home"></i></a>

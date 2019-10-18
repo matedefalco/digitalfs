@@ -25,7 +25,6 @@ if($_POST){
 
 
 </head>
-</head>
 <body>
  <form class="formulario" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
 	<h1>Registrate</h1>
