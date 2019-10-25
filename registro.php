@@ -12,7 +12,9 @@ if($_POST){
     $usuario = crearUsuario();
     guardarUsuario($usuario);
   }
+  // var_dump($errores);
 }
+
 ?>
 
 <html lang="es">
@@ -95,6 +97,12 @@ if($_POST){
 				<input type="radio" name="hm" value="h"> Hombre
 				<input type="radio" name="hm" value="m"> Mujer
 				<input type="radio" name="hm" value="o"> Otro
+        <br>
+        <small id="hm" >
+          <?php if(isset($errores['hm'])) :?>
+            <?= $errores['hm'] ?>
+          <?php endif ?>
+         </small>
 				<div class="form-group form-check">
 					<?php if(isset($_POST['tyc'])): ?>
 							<input type="checkbox" class="form-check-input" name="tyc" id="tyc" value="tyc" checked>
@@ -102,14 +110,15 @@ if($_POST){
 							<input type="checkbox" class="form-check-input" name="tyc" id="tyc" value="tyc" >
 					<?php endif ?>
 					<label for="tyc" class="form-check-label">Acepto los términos y condiciones.</label>
+          <br>
 					<small id="emailHelp" >
 						<?php if(isset($errores['tyc'])) :?>
 							<?= $errores['tyc'] ?>
 						<?php endif ?>
 					 </small>
 				</div>
+        <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
 	      <input type="submit" value="Registrate" class="button">
-	      <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
 	      <p>¿Ya tienes una cuenta?<a class="link" href="login.php">Iniciar Sesión</a></p>
 
 	     </div>

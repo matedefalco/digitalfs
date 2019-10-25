@@ -32,7 +32,7 @@ function validarinput($datos, $tipo){
       $errores['email'] = "El campo es obligatorio.";
     } else if(!filter_var($datosFinales['email'], FILTER_VALIDATE_EMAIL)){
       $errores['email'] = "Por favor ingrese un email en formato correcto.";
-    } else if( existeUsuario($email) ){
+    } else if(existeUsuario($datosFinales['email']) ){
      $errores['email'] = "El email ya se encuentra registrado.";
     }
 
@@ -50,6 +50,11 @@ function validarinput($datos, $tipo){
       $errores['repass'] = "Las contraseñas no coinciden";
     }
 
+    //Validar HM
+    if(!isset($datosFinales['hm'])){
+      $errores['hm'] = "Por favor elija una opción";
+    }
+
     //Validar TYC
     if(!isset($datosFinales['tyc'])){
       $errores['tyc'] = "Por favor acepte los términos y condiciones.";
@@ -64,13 +69,14 @@ function validarinput($datos, $tipo){
     elseif(!existeUsuario($datosFinales['email'])){
       $errores['email'] = "El usuario no está registrado";
     }
-    
+
     if(strlen($datosFinales['pass']) == 0){
       $errores['pass'] = "El campo es obligatorio.";
     } else if(strlen($datosFinales['pass']) < 4){
       $errores['pass'] = "La contraseña debe tener al menos 4 caracteres.";
     }
   }
+  return $errores;
 }
 
 function crearUsuario(){
@@ -78,7 +84,7 @@ function crearUsuario(){
     "username" => trim($_POST['username']),
     "nombre" => trim($_POST['nombre']),
     "apellido" => trim($_POST['apellido']),
-    "sexo" => trim($_POST['hm']),
+    "sexo" => $_POST['hm'],
     "email" => trim($_POST['email']),
     "password" => password_hash($_POST['pass'], PASSWORD_DEFAULT),
   ];
@@ -105,7 +111,7 @@ function guardarUsuario($usuario){
 
 function buscarUsuarioPorEmail($email){
   $json = file_get_contents("db.json");
-  $usuarios= json_decode($json, TRUE);
+  $usuarios = json_decode($json, TRUE);
   foreach($usuarios as $usuario){
     if($email == $usuario["email"]){
       return $usuario;
