@@ -12,8 +12,8 @@ function validarinput($datos, $tipo){
     }
   }
   if($tipo == "registro"){
-    if(strlen($datosFinales['username']) == 0){
-      $errores['username'] = "El campo es obligatorio.";
+    if(strlen($datosFinales['userName']) == 0){
+      $errores['userName'] = "El campo es obligatorio.";
     }
 
     if(strlen($datosFinales['nombre']) == 0){
@@ -65,15 +65,17 @@ function validarinput($datos, $tipo){
       $errores['email'] = "El campo es obligatorio.";
     } else if(!filter_var($datosFinales['email'], FILTER_VALIDATE_EMAIL)){
       $errores['email'] = "Por favor ingrese un email en formato correcto.";
-    }
-    elseif(!existeUsuario($datosFinales['email'])){
+    } elseif(!existeUsuario($datosFinales['email'])){
       $errores['email'] = "El usuario no está registrado";
     }
 
     if(strlen($datosFinales['pass']) == 0){
       $errores['pass'] = "El campo es obligatorio.";
-    } else if(strlen($datosFinales['pass']) < 4){
-      $errores['pass'] = "La contraseña debe tener al menos 4 caracteres.";
+    } else {
+      $user = buscarUsuarioPorEmail($datos["email"]);
+      if(!password_verify($datos["pass"],$user["password"])){
+        $errires["pass"] = "Usuario o contraseña son incorrectos";
+      }
     }
   }
   return $errores;
@@ -81,7 +83,7 @@ function validarinput($datos, $tipo){
 
 function crearUsuario(){
   return [
-    "username" => trim($_POST['username']),
+    "userName" => trim($_POST['userName']),
     "nombre" => trim($_POST['nombre']),
     "apellido" => trim($_POST['apellido']),
     "sexo" => $_POST['hm'],
@@ -103,16 +105,19 @@ function usuarioLogueado(){
 
 function guardarUsuario($usuario){
   $json = file_get_contents("db.json");
-  $array= json_decode($json, TRUE);
+  // var_dump($json);
+  $array= json_decode($json, true);
   $array["usuarios"][] = $usuario;
-  $json = json_encode($array, JSON_PRITTY_PRINT);
+  // var_dump($array);
+  $json = json_encode($array, JSON_PRETTY_PRINT);
   file_put_contents("db.json",$json);
 }
 
 function buscarUsuarioPorEmail($email){
   $json = file_get_contents("db.json");
-  $usuarios = json_decode($json, TRUE);
-  foreach($usuarios as $usuario){
+  $db = json_decode($json, TRUE);
+  // var_dump($db);
+  foreach($db['usuarios'] as $usuario){
     if($email == $usuario["email"]){
       return $usuario;
     }

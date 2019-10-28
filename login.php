@@ -1,11 +1,12 @@
 <?php
+session_start();
 include "auth.php";
 include "classes/user.php";
 include "classes/mysql.php";
 include "functions.php";
 
 if(usuarioLogueado()){
-	header("Location:trabajo.php");
+	header("Location:index.php");
 	exit;
 }
 
@@ -14,8 +15,8 @@ if($_POST){
 	$errores = validarinput($_POST, "login");
 
 	if(!$errores){
-		loguearUsuario($email);
-		header("Location:trabajo.php");
+		loguearUsuario($_POST["email"]);
+		header("Location:index.php");
 		exit;
 		// $conn = OpenCon();
 		// if(!empty($_POST["email"]) && !empty($_POST["pass"])){
