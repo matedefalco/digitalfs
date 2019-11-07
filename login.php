@@ -1,9 +1,6 @@
 <?php
 session_start();
-include "auth.php";
-include "classes/user.php";
-include "classes/mysql.php";
-include "functions.php";
+include "init.php";
 
 if(usuarioLogueado()){
 	header("Location:index.php");
@@ -18,19 +15,6 @@ if($_POST){
 		loguearUsuario($_POST["email"]);
 		header("Location:index.php");
 		exit;
-		// $conn = OpenCon();
-		// if(!empty($_POST["email"]) && !empty($_POST["pass"])){
-		// 	$email = $_POST["email"];
-		// 	$conn = OpenCon();
-		// 	$query = $conn->prepare("SELECT password FROM users WHERE email = '$email' ");
-		// 	$query2 = $query->execute();
-		// 	$hashedpass = $query->fetch(PDO::FETCH_ASSOC);
-		// 	if(password_verify($_POST["pass"], $hashedpass["password"])){
-		// 		header("Location:trabajo.php");
-		// 			//aca hay que hacer el login
-		// 		exit;
-		// 	}
-		// }
 	}
 }
 ?>

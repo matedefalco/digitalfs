@@ -3,12 +3,21 @@
 }
 
 body{
-  margin: 0px;
+  margin:0px;
+  padding:0px;
+  width:100%;
   background-image: url("../images/background.jpg");
 }
 
 main {
   margin: 5% 0;
+}
+
+header{
+  width: 100%;
+}
+
+article {
 }
 
 ul {
@@ -107,6 +116,7 @@ button{
 
 .likes{
   height: 15%;
+
 }
 
 .main_img img{
@@ -139,14 +149,6 @@ footer{
   list-style: none;
 }
 
-<<<<<<< HEAD
-@media (min-width: ) {
-  
-}
-
-@media (min-width: ) {
-
-=======
 @media only screen and (min-width: 768px) {
   body {
 
@@ -179,5 +181,4 @@ footer{
     width: 33.33%;
     margin: 2% 0;
   }
->>>>>>> 597313adfdf401632702d5cf9e9e711edb0f084f
 }

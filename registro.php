@@ -1,8 +1,6 @@
 <?php
 session_start();
-include "functions.php";
-include "classes/user.php";
-include "classes/mysql.php";
+include "init.php";
 
 $userNameOK = "";
 $nombreOk = "";

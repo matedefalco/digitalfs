@@ -1,12 +1,9 @@
 <?php
 session_start();
-include "auth.php";
-include "classes/user.php";
-include "classes/mysql.php";
-include "functions.php";
+include "init.php";
 
 ?>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -38,8 +35,7 @@ include "functions.php";
     <main>
       <?php
 
-  //esto de aca es asqueroso y hay que cambiarlo eventualmente.
-  //todo esto se reemplaza usando el objeto publicacion, que tiene obj comment
+
       $userName = [];
       $userimg = [];
       $mainimg = [];
@@ -52,7 +48,7 @@ include "functions.php";
       $userName[] = "xXX_DestroyerOfSouls_XXx";
       $userName[] = "Bon’Quisha";
       $userName[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
-      //hay que rellenar cada uno con mysql
+
       for($i = 0;$i < count($mainimg); $i++){
 
        ?>

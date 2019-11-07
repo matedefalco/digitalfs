@@ -1,5 +1,12 @@
 {
     "usuarios": [
-        
+        {
+            "userName": "madmadascha",
+            "nombre": "abi",
+            "apellido": "bahiaazud",
+            "sexo": "o",
+            "email": "abimadmadascha@bahiaazul.com",
+            "password": "$2y$10$sMLQAV55xB5n.2hwiUz0zeofCHQeDFVpCP6VNvm2EcQ5HXKFxep0K"
+        }
     ]
 }
