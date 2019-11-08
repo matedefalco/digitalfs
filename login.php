@@ -1,18 +1,17 @@
 <?php
-session_start();
 include "init.php";
 
-if(usuarioLogueado()){
+if(isset($_SESSION["email"])){
 	header("Location:index.php");
 	exit;
 }
 
 $errores = [];
 if($_POST){
-	$errores = validarinput($_POST, "login");
+	$errores = Validador::validarLogin($_POST);
 
 	if(!$errores){
-		loguearUsuario($_POST["email"]);
+		User::loguearUsuario($_POST["email"]);
 		header("Location:index.php");
 		exit;
 	}

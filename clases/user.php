@@ -68,11 +68,11 @@ class User {
 		$this->id = $id;
 	}
 
-	public function getUsername(){
+	public function getusername(){
 		return $this->username;
 	}
 
-	public function setUsername($username){
+	public function setusername($username){
 		$this->username = $username;
 	}
 
@@ -163,6 +163,24 @@ class User {
 	public function setPublicaciones($publicaciones){
 		$this->publicaciones = $publicaciones;
 	}
+
+  public static function crearUsuario(){
+    return [
+      "username" => trim($_POST['username']),
+      "nombre" => trim($_POST['nombre']),
+      "apellido" => trim($_POST['apellido']),
+      "sexo" => $_POST['hm'],
+      "email" => trim($_POST['email']),
+      "password" => password_hash($_POST['pass'], PASSWORD_DEFAULT),
+    ];
+  }
+
+  public static function loguearUsuario($email){
+    $_SESSION["email"] = $email;
+    if(isset($_POST["recordame"])){
+      set_cookie("email",$email,time()+60*60*60);
+    }
+  }
 
 }
 

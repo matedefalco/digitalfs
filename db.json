@@ -1,12 +1,12 @@
 {
     "usuarios": [
         {
-            "userName": "madmadascha",
-            "nombre": "abi",
-            "apellido": "bahiaazud",
-            "sexo": "o",
-            "email": "abimadmadascha@bahiaazul.com",
-            "password": "$2y$10$sMLQAV55xB5n.2hwiUz0zeofCHQeDFVpCP6VNvm2EcQ5HXKFxep0K"
+            "username": "juanpi",
+            "nombre": "juan",
+            "apellido": "pablo",
+            "sexo": "h",
+            "email": "juanpi@hotmail.com",
+            "password": "$2y$10$GkXNjH6N.K5CkdYiRmvcAusVEE8zd2SFyiL3snqMK6Nqv1Bxk0wse"
         }
     ]
 }

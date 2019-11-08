@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "init.php";
 
 ?>
@@ -18,7 +17,7 @@ include "init.php";
     <header>
       <nav class="cabecera">
         <input class="lupa" placeholder="Buscar" type="search" name="lupa" value="">
-      <?php if(usuarioLogueado()): ?>
+      <?php if(isset($_SESSION["email"])): ?>
         <a class="logout" href="destroy.php">
           <button type="button">LOGOUT</button>
         </a>
@@ -36,7 +35,7 @@ include "init.php";
       <?php
 
 
-      $userName = [];
+      $username = [];
       $userimg = [];
       $mainimg = [];
       $mainimg[] = "orange.png";
@@ -45,9 +44,9 @@ include "init.php";
       $userimg[] = "user1.jpg";
       $userimg[] = "user2.jpg";
       $userimg[] = "user3.jpg";
-      $userName[] = "xXX_DestroyerOfSouls_XXx";
-      $userName[] = "Bon’Quisha";
-      $userName[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
+      $username[] = "xXX_DestroyerOfSouls_XXx";
+      $username[] = "Bon’Quisha";
+      $username[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
 
       for($i = 0;$i < count($mainimg); $i++){
 
@@ -59,7 +58,7 @@ include "init.php";
             <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
             <div class="user_name">
               <a href="#">
-                <?php echo $userName[$i]; ?>
+                <?php echo $username[$i]; ?>
               </a>
             </div>
           </div>
@@ -97,7 +96,7 @@ include "init.php";
           <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
           <div class="user_name">
             <a href="#">
-              <?php echo $userName[$i]; ?>
+              <?php echo $username[$i]; ?>
             </a>
           </div>
         </div>
@@ -135,7 +134,7 @@ include "init.php";
         <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
         <div class="user_name">
           <a href="#">
-            <?php echo $userName[$i]; ?>
+            <?php echo $username[$i]; ?>
           </a>
         </div>
       </div>

@@ -24,7 +24,7 @@ class DbMysql extends Db
       $this->dbMysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Para poder ver en php los errores que devuelva SQL
 
     } catch (\Exception $e) {
-        echo "Hubo en error. Mensaje: ";
+        echo "Hubo un error. Mensaje: ";
         var_dump($e->getMessage());
     }
 
@@ -36,7 +36,7 @@ class DbMysql extends Db
 
     $stmt = $this->dbMysql->prepare("INSERT INTO usuarios VALUES(default, :name, :email, :password)");
 
-    $stmt->bindValue(":name", $user->getUsername());
+    $stmt->bindValue(":name", $user->getusername());
     $stmt->bindValue(":email", $user->getEmail());
     $stmt->bindValue(":password", $user->getPassword());
 

@@ -34,7 +34,7 @@ class DbJson extends Db
 
     $usuarioEnArray = [
       "id" => $user->getId(),
-      "username" => $user->getUsername(),
+      "username" => $user->getusername(),
       "email" => $user->getEmail(),
       "password" => $user->getPassword(),
     ];
@@ -45,12 +45,20 @@ class DbJson extends Db
     file_put_contents("db.json", $json);
   }
 
+  public function guardarUsuario2($usuario){
+    $json = file_get_contents("db.json");
+    $array= json_decode($json, true);
+    $array["usuarios"][] = $usuario;
+    $json = json_encode($array, JSON_PRETTY_PRINT);
+    file_put_contents("db.json",$json);
+  }
+
   public function buscarUsuarioPorEmail($email){
     $usuarios = json_decode($this->json, true);
-
     foreach ($usuarios['usuarios'] as $usuario) {
-      if($usuario['email']=== $email){ //Array;
-        $usuario = new Usuario($usuario);
+
+      if($usuario['email'] === $email){ //Array;
+        $usuario = new User($usuario);
         return $usuario; //Objeto;
       }
     }
