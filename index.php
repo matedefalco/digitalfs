@@ -68,16 +68,16 @@ include "init.php";
           <div class="likes">
             <ul class="qualify">
               <li class="up">
-                <a href="#"><i class="fa fa-angle-double-up"></i></a>
+                <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
               </li>
               <li class="down">
-                <a href="#"><i class="fa fa-angle-double-down"></i></a>
+                <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
               </li>
               <li class="share">
-                <a href="#"><i class="fa fa-share-square"></i></a>
+                <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
               </li>
               <li class="options">
-                <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+                <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
               </li>
             </ul>
           </div>
@@ -106,16 +106,16 @@ include "init.php";
         <div class="likes">
           <ul class="qualify">
             <li class="up">
-              <a href="#"><i class="fa fa-angle-double-up"></i></a>
+              <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
             </li>
             <li class="down">
-              <a href="#"><i class="fa fa-angle-double-down"></i></a>
+              <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
             </li>
             <li class="share">
-              <a href="#"><i class="fa fa-share-square"></i></a>
+              <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
             </li>
             <li class="options">
-              <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+              <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
             </li>
           </ul>
         </div>
@@ -144,16 +144,16 @@ include "init.php";
       <div class="likes">
         <ul class="qualify">
           <li class="up">
-            <a href="#"><i class="fa fa-angle-double-up"></i></a>
+            <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
           </li>
           <li class="down">
-            <a href="#"><i class="fa fa-angle-double-down"></i></a>
+            <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
           </li>
           <li class="share">
-            <a href="#"><i class="fa fa-share-square"></i></a>
+            <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
           </li>
           <li class="options">
-            <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+            <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
           </li>
         </ul>
       </div>
@@ -164,23 +164,13 @@ include "init.php";
   <br>
   <br>
     <footer class="bottom_nav">
-      <ul class="nav_final">
-        <li class="barra home">
-          <a href="#"><i class="fa fa-home"></i></a>
-        </li>
-        <li class="barra stock">
-          <a href="#"><i class="fa fa-image"></i></a>
-        </li>
-        <li class="barra add">
-          <a href="#"><i class="fa fa-plus-circle"></i></a>
-        </li>
-        <li class="barra chat">
-          <a href="#"><i class="fa fa-comment"></i></a>
-        </li>
-        <li class="barra profile">
-          <a href="#"><i class="fa fa-user"></i></a>
-        </li>
-      </ul>
+      <div class="nav_final">
+          <a href="#"><i class="barra fa fa-home fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-image fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-plus-circle fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-comment fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-user fa-3x"></i></a>
+      </div>
     </footer>
 
   </body>
