@@ -12,7 +12,7 @@
     </header>
     <main>
       <section>
-        <img src="" alt="">
+        <img src="" alt="hola">
         <?php
         // nombre usuario
          ?>
