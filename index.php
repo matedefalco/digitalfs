@@ -1,12 +1,8 @@
 <?php
-session_start();
-include "auth.php";
-include "classes/user.php";
-include "classes/mysql.php";
-include "functions.php";
+include "init.php";
 
 ?>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -21,7 +17,7 @@ include "functions.php";
     <header>
       <nav class="cabecera">
         <input class="lupa" placeholder="Buscar" type="search" name="lupa" value="">
-      <?php if(usuarioLogueado()): ?>
+      <?php if(isset($_SESSION["email"])): ?>
         <a class="logout" href="destroy.php">
           <button type="button">LOGOUT</button>
         </a>
@@ -38,9 +34,8 @@ include "functions.php";
     <main>
       <?php
 
-  //esto de aca es asqueroso y hay que cambiarlo eventualmente.
-  //todo esto se reemplaza usando el objeto publicacion, que tiene obj comment
-      $userName = [];
+
+      $username = [];
       $userimg = [];
       $mainimg = [];
       $mainimg[] = "orange.png";
@@ -49,10 +44,10 @@ include "functions.php";
       $userimg[] = "user1.jpg";
       $userimg[] = "user2.jpg";
       $userimg[] = "user3.jpg";
-      $userName[] = "xXX_DestroyerOfSouls_XXx";
-      $userName[] = "Bon’Quisha";
-      $userName[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
-      //hay que rellenar cada uno con mysql
+      $username[] = "xXX_DestroyerOfSouls_XXx";
+      $username[] = "Bon’Quisha";
+      $username[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
+
       for($i = 0;$i < count($mainimg); $i++){
 
        ?>
@@ -63,7 +58,7 @@ include "functions.php";
             <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
             <div class="user_name">
               <a href="#">
-                <?php echo $userName[$i]; ?>
+                <?php echo $username[$i]; ?>
               </a>
             </div>
           </div>
@@ -73,16 +68,16 @@ include "functions.php";
           <div class="likes">
             <ul class="qualify">
               <li class="up">
-                <a href="#"><i class="fa fa-angle-double-up"></i></a>
+                <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
               </li>
               <li class="down">
-                <a href="#"><i class="fa fa-angle-double-down"></i></a>
+                <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
               </li>
               <li class="share">
-                <a href="#"><i class="fa fa-share-square"></i></a>
+                <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
               </li>
               <li class="options">
-                <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+                <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
               </li>
             </ul>
           </div>
@@ -101,7 +96,7 @@ include "functions.php";
           <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
           <div class="user_name">
             <a href="#">
-              <?php echo $userName[$i]; ?>
+              <?php echo $username[$i]; ?>
             </a>
           </div>
         </div>
@@ -111,16 +106,16 @@ include "functions.php";
         <div class="likes">
           <ul class="qualify">
             <li class="up">
-              <a href="#"><i class="fa fa-angle-double-up"></i></a>
+              <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
             </li>
             <li class="down">
-              <a href="#"><i class="fa fa-angle-double-down"></i></a>
+              <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
             </li>
             <li class="share">
-              <a href="#"><i class="fa fa-share-square"></i></a>
+              <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
             </li>
             <li class="options">
-              <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+              <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
             </li>
           </ul>
         </div>
@@ -139,7 +134,7 @@ include "functions.php";
         <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
         <div class="user_name">
           <a href="#">
-            <?php echo $userName[$i]; ?>
+            <?php echo $username[$i]; ?>
           </a>
         </div>
       </div>
@@ -149,16 +144,16 @@ include "functions.php";
       <div class="likes">
         <ul class="qualify">
           <li class="up">
-            <a href="#"><i class="fa fa-angle-double-up"></i></a>
+            <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
           </li>
           <li class="down">
-            <a href="#"><i class="fa fa-angle-double-down"></i></a>
+            <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
           </li>
           <li class="share">
-            <a href="#"><i class="fa fa-share-square"></i></a>
+            <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
           </li>
           <li class="options">
-            <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+            <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
           </li>
         </ul>
       </div>
@@ -169,23 +164,13 @@ include "functions.php";
   <br>
   <br>
     <footer class="bottom_nav">
-      <ul class="nav_final">
-        <li class="barra home">
-          <a href="#"><i class="fa fa-home"></i></a>
-        </li>
-        <li class="barra stock">
-          <a href="#"><i class="fa fa-image"></i></a>
-        </li>
-        <li class="barra add">
-          <a href="#"><i class="fa fa-plus-circle"></i></a>
-        </li>
-        <li class="barra chat">
-          <a href="#"><i class="fa fa-comment"></i></a>
-        </li>
-        <li class="barra profile">
-          <a href="#"><i class="fa fa-user"></i></a>
-        </li>
-      </ul>
+      <div class="nav_final">
+          <a href="#"><i class="barra fa fa-home fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-image fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-plus-circle fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-comment fa-3x"></i></a>
+          <a href="#"><i class="barra fa fa-user fa-3x"></i></a>
+      </div>
     </footer>
 
   </body>

@@ -1,36 +1,19 @@
 <?php
-session_start();
-include "auth.php";
-include "classes/user.php";
-include "classes/mysql.php";
-include "functions.php";
+include "init.php";
 
-if(usuarioLogueado()){
+if(isset($_SESSION["email"])){
 	header("Location:index.php");
 	exit;
 }
 
 $errores = [];
 if($_POST){
-	$errores = validarinput($_POST, "login");
+	$errores = Validador::validarLogin($_POST);
 
 	if(!$errores){
-		loguearUsuario($_POST["email"]);
+		User::loguearUsuario($_POST["email"]);
 		header("Location:index.php");
 		exit;
-		// $conn = OpenCon();
-		// if(!empty($_POST["email"]) && !empty($_POST["pass"])){
-		// 	$email = $_POST["email"];
-		// 	$conn = OpenCon();
-		// 	$query = $conn->prepare("SELECT password FROM users WHERE email = '$email' ");
-		// 	$query2 = $query->execute();
-		// 	$hashedpass = $query->fetch(PDO::FETCH_ASSOC);
-		// 	if(password_verify($_POST["pass"], $hashedpass["password"])){
-		// 		header("Location:trabajo.php");
-		// 			//aca hay que hacer el login
-		// 		exit;
-		// 	}
-		// }
 	}
 }
 ?>

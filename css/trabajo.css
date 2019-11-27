@@ -3,7 +3,9 @@
 }
 
 body{
-  margin: 0px;
+  margin:0px;
+  padding:0px;
+  width:100%;
   background-image: url("../images/background.jpg");
 }
 
@@ -11,32 +13,32 @@ main {
   margin: 5% 0;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
+header{
+  width: 100%;
 }
 
-.qualify{
-  margin-left: 1%;
+article {
 }
 
-li {
+.likes{
+  height: 15%;
+
+}
+
+.fa{
+  sizing: 2%;
+}
+
+.up, .down, .share, .options{
+  list-style: none;
   float: left;
-  padding: 2%;
-  border: solid 1px;
-  background-color: #e7d9ec;
 }
 
-.options{
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
-}
-
-.up{
-  border-top-left-radius: 20%;
-  border-bottom-left-radius: 20%;
+.qualify {
+  padding: 3%;
+  margin-left: 4%;
+  overflow: hidden;
+  list-style-type: none;
 }
 
 a{
@@ -105,48 +107,28 @@ button{
   height: 65%;
 }
 
-.likes{
-  height: 15%;
-}
-
 .main_img img{
   height: 100%;
 }
 
-footer{
+.bottom_nav{
+  background-color: rgb(255, 255, 255);
   width: 100%;
-  position: relative;
+  position: fixed;
+  height: 8%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
 }
 
-.nav_final {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: white;
-   text-align: center;
+.nav_final .barra{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
-.barra{
-  width: 20%;
-}
-
-.fa{
-  sizing: 2%;
-}
-
-.up .down .share .options{
-  list-style: none;
-}
-
-<<<<<<< HEAD
-@media (min-width: ) {
-  
-}
-
-@media (min-width: ) {
-
-=======
 @media only screen and (min-width: 768px) {
   body {
 
@@ -154,8 +136,11 @@ footer{
   article {
     height: 55%;
     float: left;
-    width: 50%;
-    margin: 2% 0;
+    width: 46%;
+    margin: 2% 2%;
+  }
+  main{
+    background-color: rgba(255, 255, 255, 0.75);
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -165,19 +150,13 @@ footer{
   article {
     height: 55%;
     float: left;
-    width: 33.33%;
-    margin: 2% 0;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  main {
+    width: 46%;
+    margin: 2% 2%;
 
   }
-  article {
-    height: 55%;
-    float: left;
-    width: 33.33%;
-    margin: 2% 0;
+  main{
+    background-color: rgba(255, 255, 255, 0.75);
   }
->>>>>>> 597313adfdf401632702d5cf9e9e711edb0f084f
+}
+
 }

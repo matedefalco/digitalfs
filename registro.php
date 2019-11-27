@@ -1,36 +1,32 @@
 <?php
-session_start();
-include "functions.php";
-include "classes/user.php";
-include "classes/mysql.php";
+include "init.php";
 
-$userNameOK = "";
+$usernameOK = "";
 $nombreOk = "";
 $apellidoOk = "";
 $emailOk = "";
 
-if(usuarioLogueado()){
+if(isset($_SESSION["email"])){
   header("Location:index.php");
   exit;
 }
 
 if($_POST){
   $errores = [];
-  $errores = validarinput($_POST, "registro");
+  $errores = Validador::validarRegistro($_POST);
 
-  $userNameOK = trim($_POST["userName"]);
+  $usernameOK = trim($_POST["username"]);
   $nombreOk = trim($_POST["nombre"]);
   $apellido = trim($_POST["apellido"]);
   $emailOk = trim($_POST["email"]);
 
   if(!$errores){
-    $usuario = crearUsuario();
-    guardarUsuario($usuario);
-    loguearUsuario($_POST["email"]);
+    $usuario = User::crearUsuario();
+    Dbjson::guardarUsuario2($usuario);
+    User::loguearUsuario($_POST["email"]);
     header("Location:index.php");
     exit;
   }
-  // var_dump($errores);
 }
 
 ?>
@@ -51,15 +47,15 @@ if($_POST){
 	    <div class="contenedor">
 
 				<div class="input-contenedor">
-					<label for="userName"><i class="fas fa-user icon"></i></label>
-          <?php if(!isset($errores["userName"])): ?>
-		      <input type="text" placeholder="userName" id="userName" name="userName" value="<?= $userNameOK ?>">
+					<label for="username"><i class="fas fa-user icon"></i></label>
+          <?php if(!isset($errores["username"])): ?>
+		      <input type="text" placeholder="username" id="username" name="username" value="<?= $usernameOK ?>">
         <?php else: ?>
-           <input type="text" placeholder="userName" id="userName" name="userName">
+           <input type="text" placeholder="username" id="username" name="username">
          <?php endif ?>
 					<small id="emailHelp" >
-						<?php if(isset($errores['userName'])) :?>
-							<h6><?= $errores['userName'] ?></h6>
+						<?php if(isset($errores['username'])) :?>
+							<h6><?= $errores['username'] ?></h6>
 					<?php endif ?>
 					 </small>
 	      </div>
