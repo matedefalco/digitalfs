@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Post;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -26,5 +26,9 @@ class HomeController extends Controller
     {
       $posts = Post::all();
       return view('home');
+    }
+
+    public function storage(){
+      
     }
 }

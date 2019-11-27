@@ -8,6 +8,10 @@ class Post extends Model
 {
   // public $table = "posts";
   // public $timestamps = false;
-  public $guarded = [];
+  protected $guarded = [];
   // public $primaryKey = "id";
+
+  public function user(){
+    $this->belongsTo('App\User','user_id');
+  }
 }

@@ -36,23 +36,20 @@
     $username[] = "Bon’Quisha";
     $username[] = "◯☾𝒪𝓃𝒾-𝒸𝒽𝒶𝓃◯☾";
 
-    for($i = 0;$i < count($mainimg); $i++){
-
-     ?>
-
     <article>
       <div class="post">
+
         <div class="user">
-          <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
+          <img class="user_img" src="images/{{user->post}}"alt="user img">
           <div class="user_name">
-            <a href="#">
-              <?php echo $username[$i]; ?>
-            </a>
+            <a href="#">{{user->name}}</a>
           </div>
         </div>
+
         <div class="main_img">
-          <img src="images/<?php echo $mainimg[$i]; ?>" class="" alt="main image">
+          <img src="storage/post_img/{{user->post}}" class="" alt="main image">
         </div>
+
         <div class="likes">
           <ul class="qualify">
             <li class="up">
@@ -69,15 +66,13 @@
             </li>
           </ul>
         </div>
+
       </div>
-    </article>
-  <?php } ?>
+    </article
 
-  <?php
-  for($i = 0;$i < count($mainimg); $i++){
 
-   ?>
-
+  // for($i = 0;$i < count($mainimg); $i++){
+  //
   <article>
     <div class="post">
       <div class="user">
@@ -109,45 +104,41 @@
       </div>
     </div>
   </article>
-<?php } ?>
 
-<?php
-for($i = 0;$i < count($mainimg); $i++){
+// for($i = 0;$i < count($mainimg); $i++){
 
- ?>
+// <article>
+//   <div class="post">
+//     <div class="user">
+//       <img class="user_img" src="images/$userimg[$i]; "alt="user img">
+//       <div class="user_name">
+//         <a href="#">
+//           // echo $username[$i];
+//         </a>
+//       </div>
+//     </div>
+//     <div class="main_img">
+//       <img src="images/ $mainimg[$i]; " class="" alt="main image">
+//     </div>
+//     <div class="likes">
+//       <ul class="qualify">
+//         <li class="up">
+//           <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
+//         </li>
+//         <li class="down">
+//           <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
+//         </li>
+//         <li class="share">
+//           <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
+//         </li>
+//         <li class="options">
+//           <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
+//         </li>
+//       </ul>
+//     </div>
+//   </div>
+// </article>
 
-<article>
-  <div class="post">
-    <div class="user">
-      <img class="user_img" src="images/<?php echo $userimg[$i]; ?>"alt="user img">
-      <div class="user_name">
-        <a href="#">
-          <?php echo $username[$i]; ?>
-        </a>
-      </div>
-    </div>
-    <div class="main_img">
-      <img src="images/<?php echo $mainimg[$i]; ?>" class="" alt="main image">
-    </div>
-    <div class="likes">
-      <ul class="qualify">
-        <li class="up">
-          <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
-        </li>
-        <li class="down">
-          <a href="#"><i class="fa fa-angle-double-down fa-2x"></i></a>
-        </li>
-        <li class="share">
-          <a href="#"><i class="fa fa-share-square fa-2x"></i></a>
-        </li>
-        <li class="options">
-          <a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</article>
-<?php } ?>
 </main>
 <br>
 <br>
@@ -160,5 +151,6 @@ for($i = 0;$i < count($mainimg); $i++){
         <a href="#"><i class="barra fa fa-user fa-3x"></i></a>
     </div>
   </footer>
-</div>
+
+  <form action="/postear" method="POST">
 @endsection
