@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Auth;
 
 class PostController extends Controller
 {
@@ -14,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('post');
     }
 
     /**
@@ -35,10 +36,27 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+      $this->validate($request,
+      [
+        'description' => ['max:500','required'],
+        'image' => ['file','image']
+      ],
+      [
+        'required' => 'Este campo es obligatorio',
+        'image' => 'Suba una imagen por favor',
+      ]);
       $post = new Post;
 
       $post->description = $request->description;
-      $post->img ) 
+      $post->user_id = Auth::user()->id;
+      $ruta = $request->file('image')->store('public/post_img');
+      $nombreImg = basename($ruta);
+      $post->img = $nombreImg;
+
+      $post->save();
+
+
+      return redirect('/');
 
     }
 

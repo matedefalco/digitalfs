@@ -17,7 +17,8 @@
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', 'HomeController@index');
-
 Route::post('/postear', 'PostController@store');
+//Vistas
+Route::get('/', 'HomeController@index');
+Route::get('/post','PostController@index');
+Route::get('/message','MessageController@index');
