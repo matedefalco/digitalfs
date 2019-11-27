@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-  protected $guarded = [];
+  // public $table = "posts";
+  // public $timestamps = false;
+  public $guarded = [];
+  // public $primaryKey = "id";
 }

@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Message extends Model
 {
-  protected $guarded = [];
+  public $table = "messages";
+  public $timestamps = false;
+  public $guarded = [];
+  // public $primaryKey = "id";
 }
