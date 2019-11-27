@@ -126,7 +126,7 @@ if($_POST){
 					 </small>
 	      </div>
 
-				<p>Sexo:
+				<p>Sexo:</p>
 				<input type="radio" name="hm" value="h"> Hombre
 				<input type="radio" name="hm" value="m"> Mujer
 				<input type="radio" name="hm" value="o"> Otro
