@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class FkVariosToPostsTable extends Migration
+class AddAvatarToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class FkVariosToPostsTable extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-          $table->foreign('user_id')->references('id')->on('users');
-          $table->foreign('comment_id')->references('id')->on('comments');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('avatar', 300)->nullable();
         });
     }
 
@@ -26,8 +25,8 @@ class FkVariosToPostsTable extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            //
+        Schema::table('users', function (Blueprint $table) {
+          $table->dropColumn('avatar');
         });
     }
 }

@@ -16,9 +16,8 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('img', 300);
+            $table->text('description');
             $table->bigInteger('user_id')->unsigned();
-            $table->integer('likes');
-            $table->bigInteger('comment_id')->unsigned();
             $table->timestamps();
         });
     }

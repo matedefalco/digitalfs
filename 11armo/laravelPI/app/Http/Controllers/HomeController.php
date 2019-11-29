@@ -25,10 +25,10 @@ class HomeController extends Controller
     public function index()
     {
       $posts = Post::all();
-      return view('home');
+      return view('home', compact('posts'));
     }
 
     public function storage(){
-      
+
     }
 }
