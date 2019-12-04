@@ -2,25 +2,24 @@
 
 @section('content')
   {{-- @dd($posts) --}}
-<div class="container">
-
-  <main>
+  <section class='feed row align-items-center'>
     @foreach($posts as $post)
-    <article>
-      <div class="post">
+      <article class='post col-6'>
 
-        <div class="user">
-          <img class="user_img" src="storage/avatar_img/{{$post->user->avatar}}"alt="user img">
-          <div class="user_name">
-            <a href="#"></a>
+        <div class="userContainer row">
+          <div class="avatarContainer col-3">
+            <img class="user_img" src="storage/avatar_img/{{$post->user->avatar}}"alt="user img">
+          </div>
+          <div class="nameContainer col-9">
+            <a href="">{{$post->user->name}}</a>
           </div>
         </div>
 
-        <div class="main_img">
-          <img src="storage/post_img/{{$post->user->img}}" class="" alt="main image">
+        <div class="mainImageContainer">
+          <img src="storage/post_img/{{$post->img}}" class="main_img" alt="main image">
         </div>
 
-        <div class="likes">
+        <div class="linkesContainer">
           <ul class="qualify">
             <li class="up">
               <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
@@ -37,14 +36,9 @@
           </ul>
         </div>
 
-      </div>
-    </article>
-  @endforeach
-
-  </main>
-  <br>
-  <br>
-
+      </article>
+    @endforeach
+    </section>
 
 
 @endsection

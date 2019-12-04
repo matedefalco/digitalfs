@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -7,69 +7,69 @@ body{
   padding:0px;
   width:100%;
   background-image: url("../images/background.jpg");
-}
-
+} */
+/*
 main {
-  margin: 5% 0;
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
 
-header{
+} */
+
+/* header{
   width: 100%;
-}
+} */
 
-article {
-}
+/* article {
+} */
 
-.likes{
+/* .likes{
   height: 15%;
 
-}
+} */
 
-.fa{
+/* .fa{
   sizing: 2%;
-}
+} */
 
-.up, .down, .share, .options{
+/* .up, .down, .share, .options{
   list-style: none;
   float: left;
-}
-
+} */
+/*
 .qualify {
-  padding: 3%;
-  margin-left: 4%;
   overflow: hidden;
   list-style-type: none;
-}
+} */
 
-a{
+/* a{
   text-decoration: none;
-}
+} */
 
-button{
+/* button{
   background-color: #3b54da;
   color: white;
-  padding: 5%;
   border: solid 1px white;
   border-radius: 15%;
 
-}
+} */
 
-.header .main .footer{
+/* .header .main .footer{
   width: 100%;
-}
+} */
 
-.cabecera{
+/* .cabecera{
   border: solid 1px;
   display: inline-block;
   width: 100%;
   background-color: white;
-}
+} */
 
-.top{
+/* .top{
   overflow: hidden;
-}
+} */
 
-.lupa{
+/* .lupa{
   float:left;
   margin: 1.15%;
 }
@@ -77,41 +77,43 @@ button{
 .login{
   float:right;
   margin: 1.15%;
-}
+} */
+/* .feed{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+} */
 
-.post{
-  margin-bottom: 2.35%;
-  height: 100%;
-}
-
-.user{
+/* .user{
   height: 20%;
-  margin-bottom: 3.5%;
-  margin-top: 3.5%;
   overflow: hidden;
-}
+  display: inline-block;
+} */
 
-.user_img{
+/* .div_img{
+  height:100%;
+  float: left;
+  display: inline-block;
+} */
+
+/* .user_img{
   height: 100%;
   border-radius: 50%;
-  margin-top: 1.15%;
-  margin-left: 0.7%;
-  float: left;
-}
+} */
 
-.user_name{
+/* .user_name{
   float: left;
-}
+} */
 
-.main_img{
+/* .main_img{
   height: 65%;
-}
+} */
 
-.main_img img{
+/* .main_img img{
   height: 100%;
-}
+} */
 
-.bottom_nav{
+/* .bottom_nav{
   background-color: rgb(255, 255, 255);
   width: 100%;
   position: fixed;
@@ -121,13 +123,53 @@ button{
   left: 0;
   bottom: 0;
   text-align: center;
-}
+} */
 
-.nav_final .barra{
+/* .nav_final .barra{
   display: inline-block;
   margin: 0;
   padding: 0;
+} */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+.post{
+  /* border: 1px solid black; */
+  padding: 20px;
+}
+
+.userContainer{
+  padding: 10px 0;
+  /* border: solid 1px black; */
+}
+
+.user_img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.main_img{
+  width: 100%;
+}
+
+.up, .down, .share, .options{
+  list-style: none;
+  float: left;
+}
+
+.qualify {
+  overflow: hidden;
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
 
 @media only screen and (min-width: 768px) {
   body {
@@ -137,7 +179,6 @@ button{
     height: 55%;
     float: left;
     width: 46%;
-    margin: 2% 2%;
   }
   main{
     background-color: rgba(255, 255, 255, 0.75);
@@ -151,7 +192,7 @@ button{
     height: 55%;
     float: left;
     width: 46%;
-    margin: 2% 2%;
+    /* margin: 2% 2%; */
 
   }
   main{
