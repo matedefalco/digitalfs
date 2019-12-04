@@ -18,14 +18,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master.css">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                {{-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                </a>
+                </a> --}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -75,6 +76,15 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer class="bottom_nav">
+          <div class="nav_final">
+              <a href="#"><i class="barra fa fa-home fa-3x"></i></a>
+              <a href="#"><i class="barra fa fa-image fa-3x"></i></a>
+              <a href="#"><i class="barra fa fa-plus-circle fa-3x"></i></a>
+              <a href="#"><i class="barra fa fa-comment fa-3x"></i></a>
+              <a href="#"><i class="barra fa fa-user fa-3x"></i></a>
+          </div>
+        </footer>
     </div>
 </body>
 </html>
