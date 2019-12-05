@@ -17,7 +17,7 @@
         </div>
 
         <div class="main_img">
-          <img src="storage/post_img/{{$post->user->img}}" class="" alt="main image">
+          <img src="storage/post_img/{{$post->img}}" class="" alt="main image">
         </div>
 
         <div class="likes">
