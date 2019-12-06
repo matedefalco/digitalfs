@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+.mainnav{
+  background-color: #0288d1;
+}
+
 .backgroundcolor{
   height:100%;
   background-color: rgba(0, 0, 0, 0.1);
