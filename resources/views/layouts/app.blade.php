@@ -82,12 +82,7 @@
               <a href="/"><i class="barra fa fa-home fa-3x col-2"></i></a>
               <a href="#"><i class="barra fa fa-image fa-3x col-2"></i></a>
               <a href="/crearPost"><i class="barra fa fa-plus-circle fa-3x col-2"></i></a>
-              <a href="#"><i class="barra fa fa-comment fa-3x col-2"></i></a>
-<<<<<<< HEAD
-              <a href="/user/"{{--}}{{$currentUser->id}}--}}><i class="barra fa fa-user fa-3x col-2"></i></a>
-=======
-              <a href="/user/"{{--{{$currentUser->id}}--}}><i class="barra fa fa-user fa-3x col-2"></i></a>
->>>>>>> de32e841453d11c08d0768f7b54f1c0617a602f7
+              <a href="#"><i class="barra fa fa-comment fa-3x col-2"></i></a><a href="/user/"{{--{{$currentUser->id}}--}}><i class="barra fa fa-user fa-3x col-2"></i></a>
         </footer>
     </div>
 </body>
