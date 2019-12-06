@@ -83,7 +83,7 @@
               <a href="#"><i class="barra fa fa-image fa-3x col-2"></i></a>
               <a href="/crearPost"><i class="barra fa fa-plus-circle fa-3x col-2"></i></a>
               <a href="#"><i class="barra fa fa-comment fa-3x col-2"></i></a>
-              <a href="#"><i class="barra fa fa-user fa-3x col-2"></i></a>
+              <a href="/user/"{{$currentUser->id}}><i class="barra fa fa-user fa-3x col-2"></i></a>
         </footer>
     </div>
 </body>
