@@ -1,11 +1,18 @@
+/* Todo */
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Main */
+
 .mainnav{
   background-color: #0288d1;
+}
+
+.main_img{
+  width: 100%;
 }
 
 .backgroundcolor{
@@ -13,10 +20,7 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.post{
-  /* border: 1px solid black; */
-  padding: 20px;
-}
+/* User */
 
 .userContainer{
   padding: 10px 0;
@@ -28,13 +32,25 @@
   border-radius: 50%;
 }
 
-.main_img{
-  width: 100%;
+/* Post */
+
+.post{
+  /* border: 1px solid black; */
+  padding: 20px;
 }
 
 .up, .down, .share, .options{
   list-style: none;
   float: left;
+}
+
+.crearPostGris{
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.crearPostBlanco{
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .qualify {
@@ -52,6 +68,8 @@ a, a:hover, a:focus, a:active {
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.85);
 }
+
+/* Media query */
 
 @media only screen and (max-width: 767.98px) {
 
@@ -83,7 +101,5 @@ a, a:hover, a:focus, a:active {
     background-color: rgba(255, 255, 255, 0.85);
     width: 65%;
   }
-
-}
 
 }

@@ -16,7 +16,8 @@ class UnPostController extends Controller
      public function index($id)
      {
        $post = Post::where("id", "=", $id )->get()->first();
-       return view('post', compact('post'));
+       $comments = Comment::where("post_id", "=", $post->id )->get();
+       return view('post', compact('post', 'comments'));
      }
 
     /**

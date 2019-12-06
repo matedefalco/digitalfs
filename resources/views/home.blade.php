@@ -8,7 +8,7 @@
 
         <div class="userContainer row">
           <div class="avatarContainer col-3">
-            <img class="user_img" src="storage/avatar_img/{{$post->user->avatar}}"alt="user img">
+            <img class="user_img" src="/storage/avatar_img/{{$post->user->avatar}}"alt="user img">
           </div>
           <div class="namecontainer col-9">
             <a href="/user/{{$post->user->id}}">{{$post->user->name}}</a>
