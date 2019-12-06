@@ -22,3 +22,9 @@ Route::post('/postear', 'PostController@store');
 Route::get('/', 'HomeController@index');
 Route::get('/post','PostController@index');
 Route::get('/message','MessageController@index');
+//Individuales
+Route::get('/user/{id}', 'UserController@index');
+Route::get('/post/{id}', 'UnPostController@index');
+//Crear
+Route::get('/crearPost','PostController@create');
+Route::post('/crearPost','PostController@store');

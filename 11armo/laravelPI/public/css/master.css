@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+.backgroundcolor{
+  height:100%;
+  background-color: rgba(166, 191, 217, 1)
+}
+
 .post{
   /* border: 1px solid black; */
   padding: 20px;
@@ -38,11 +43,14 @@ a, a:hover, a:focus, a:active {
      color: inherit;
 }
 
+.bottom_nav{
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
 @media only screen and (max-width: 767.98px) {
 
-  .backgroundcolor{
-    background-color: rgba(0, 0, 0, 0.75);
-  }
 
   .container-fluid{
     background-color: rgba(255, 255, 255, 1);
@@ -51,9 +59,6 @@ a, a:hover, a:focus, a:active {
 }
 @media only screen and (min-width: 768px) {
 
-  .backgroundcolor{
-    background-color: rgba(0, 0, 0, 0.75);
-  }
 
   .container-fluid{
     background-color: rgba(255, 255, 255, 1);

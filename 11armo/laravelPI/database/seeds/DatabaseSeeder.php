@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
         factory(User::class)->times(10)->create();
         factory(Post::class)->times(30)->create();
         factory(PostLike::class)->times(20)->create();
-        factory(Comment::class)->times(20)->create();
+        factory(Comment::class)->times(1000)->create();
     }
 }

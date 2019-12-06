@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -77,14 +78,12 @@
               @yield('content')
           </div>
         <main/>
-        <footer class="bottom_nav">
-          <div class="nav_final">
-              <a href="#"><i class="barra fa fa-home fa-3x"></i></a>
-              <a href="#"><i class="barra fa fa-image fa-3x"></i></a>
-              <a href="#"><i class="barra fa fa-plus-circle fa-3x"></i></a>
-              <a href="#"><i class="barra fa fa-comment fa-3x"></i></a>
-              <a href="#"><i class="barra fa fa-user fa-3x"></i></a>
-          </div>
+        <footer class="bottom_nav container col-12" align="center">
+              <a href="#"><i class="barra fa fa-home fa-3x col-2"></i></a>
+              <a href="#"><i class="barra fa fa-image fa-3x col-2"></i></a>
+              <a href="/crearPost"><i class="barra fa fa-plus-circle fa-3x col-2"></i></a>
+              <a href="#"><i class="barra fa fa-comment fa-3x col-2"></i></a>
+              <a href="#"><i class="barra fa fa-user fa-3x col-2"></i></a>
         </footer>
     </div>
 </body>
