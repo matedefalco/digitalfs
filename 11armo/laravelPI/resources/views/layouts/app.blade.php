@@ -72,10 +72,11 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4 container">
-            @yield('content')
-        </main>
+        <main class="backgroundcolor">
+          <div class="py-4 container-fluid maincontainer">
+              @yield('content')
+          </div>
+        <main/>
         <footer class="bottom_nav">
           <div class="nav_final">
               <a href="#"><i class="barra fa fa-home fa-3x"></i></a>

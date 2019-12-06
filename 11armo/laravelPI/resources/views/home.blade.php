@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-  {{-- @dd($posts) --}}
+
   <section class='feed row align-items-center'>
     @foreach($posts as $post)
-      <article class='post col-6'>
+      <article class='post col-xs-12 col-md-6 col-lg-6'>
 
         <div class="userContainer row">
           <div class="avatarContainer col-3">
             <img class="user_img" src="storage/avatar_img/{{$post->user->avatar}}"alt="user img">
           </div>
-          <div class="nameContainer col-9">
-            <a href="">{{$post->user->name}}</a>
+          <div class="namecontainer col-9">
+            <a href="{{ route('user') }}">{{$post->user->name}}</a>
           </div>
         </div>
 
