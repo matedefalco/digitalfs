@@ -5,7 +5,6 @@
 <?php $count = 0; ?>
 
   <section class='feed row align-items-center'>
-
     @foreach($posts as $post)
 
       <?php if($count == 0){ ?>
@@ -15,7 +14,7 @@
               <img class="user_img" src="/storage/avatar_img/{{$post->user->avatar}}"alt="user img">
             </div>
             <div class="namecontainer col-9">
-              <a href="/user/{{$post->user->id}}">{{$post->user->name}}</a>
+              <a class="username" href="/user/{{$post->user->id}}">{{$post->user->name}}</a>
             </div>
           </div>
         </div>
@@ -34,6 +33,6 @@
       <?php $count++; ?>
     @endforeach
     </section>
-
+    
 
 @endsection

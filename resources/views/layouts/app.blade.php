@@ -15,17 +15,17 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/css/master.css">
-</head>
+    <link rel="stylesheet" href="/css/lineawsome/css/line-awesome.css">
 <body>
     <div id="app">
         <nav class="mainnav navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand hometitle"href="/">
                     Home
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -79,10 +79,11 @@
           </div>
         <main/>
         <footer class="bottom_nav container col-12" align="center">
-              <a href="/"><i class="barra fa fa-home fa-3x col-2"></i></a>
-              <a href="#"><i class="barra fa fa-image fa-3x col-2"></i></a>
-              <a href="/crearPost"><i class="barra fa fa-plus-circle fa-3x col-2"></i></a>
-              <a href="#"><i class="barra fa fa-comment fa-3x col-2"></i></a><a href="/user/"{{--{{$currentUser->id}}--}}><i class="barra fa fa-user fa-3x col-2"></i></a>
+          <a href="/"><i class="barra las la-igloo fa-3x col-2"></i></a>
+          <a href="#"><i class="la la-camera fa-3x col-2"></i></a>
+          <a href="/crearPost"><i class="barra la la-plus fa-3x col-2"></i></a>
+          <a href="#"><i class="barra la la-comments fa-3x col-2"></i></a>
+          <a href="/user/"{{--{{$currentUser->id}}--}}><i class="barra la la-user-circle fa-3x col-2"></i></a>
         </footer>
     </div>
 </body>

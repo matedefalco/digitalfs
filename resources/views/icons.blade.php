@@ -1,14 +1,17 @@
 <div class="likesContainer row">
-    <div class="up col-1">
-      <a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a>
-    </div>
-    <div class="down col-1">
-      <a href="#"><i class="fa fa-angle-double-down fa-3x"></i></a>
-    </div>
-    <div class="share col-1">
-      <a href="#"><i class="fa fa-share-square fa-3x"></i></a>
-    </div>
-    <div class="options col-1">
-      <a href="#"><i class="fa fa-ellipsis-h fa-3x"></i></a>
-    </div>
+  <a href="#" style="width:12.5%">
+    <i class="likesitem la la-thumbs-up fa-3x" style="width:100%"></i>
+  </a>
+
+  <a href="#" style="width:12.5%">
+    <i class="likesitem la la-thumbs-down fa-3x" style="width:100%"></i>
+  </a>
+
+  <a href="#" style="width:12.5%">
+    <i class="likesitem la la-share fa-3x" style="width:100%"></i>
+  </a>
+
+  <a href="#" style="width:12.5%">
+    <i class="likesitem la la-ellipsis-v fa-3x" style="width:100%"></i>
+  </a>
 </div>
