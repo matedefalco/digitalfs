@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+  <script src="/js/comments.js" charset="utf-8"></script>
 
   <section class='feed row align-items-center'>
     <article class='post col-8' >
@@ -32,6 +33,8 @@
         </div>
         <br>
       @endforeach
+
+      <a href="/api/comment/post/{{$post->id}}" class="verMas">Show more</a>
     </div>
   </section>
 

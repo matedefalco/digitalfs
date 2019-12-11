@@ -17,3 +17,4 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 // Route::get('/post/show/{id}', 'UnPostController@show');
+Route::get('/comment/post/{id}','CommentController@search');

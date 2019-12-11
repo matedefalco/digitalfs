@@ -2,6 +2,27 @@
 
 return [
 
+  // 'providers'     => array(
+  //
+  //      //...
+  //      Ixudra\Curl\CurlServiceProvider::class,
+  //
+  //  ),
+  //
+  //  'aliases'       => array(
+  //
+  //      //...
+  //      'Curl'          => Ixudra\Curl\Facades\Curl::class,
+  //
+  //  ),
+  //
+  //  'facades'       => array(
+  //
+  //      //...
+  //      'Curl'          => 'Ixudra\Curl\Facades\Curl',
+  //
+  //  ),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

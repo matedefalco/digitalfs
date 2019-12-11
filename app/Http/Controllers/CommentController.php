@@ -82,4 +82,14 @@ class CommentController extends Controller
     {
         //
     }
+
+    public function search($id)
+    {
+      $comentarios = Comment::where('post_id', $id)->get();
+      $comentariosConUser = array_map(function($e){
+        return $e->avatar = $e->user->avatar;
+      }, $comentarios);
+      dd($comentariosConUser);
+      return $comentarios;
+    }
 }
