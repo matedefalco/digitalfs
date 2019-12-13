@@ -1,5 +1,13 @@
 @extends('layouts.app')
 @section('content')
+
+  <?php
+    $array = [];
+    $array[] = $post->id;
+    $outputarray = serialize($array);
+    $offset = 0;
+  ?>
+
   <script src="/js/comments.js" charset="utf-8"></script>
 
   <section class='feed row align-items-center'>
@@ -34,7 +42,7 @@
         <br>
       @endforeach
 
-      <a href="/api/comment/post/{{$post->id}}" class="verMas">Show more</a>
+      <a href="/api/comment/post/{{$outputarray}}/{{$offset}}" class="verMas">Show more</a>
     </div>
   </section>
 

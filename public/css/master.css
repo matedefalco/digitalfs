@@ -23,10 +23,16 @@ body {
   height: 100%;
 }
 
+.hometitleimage{
+  display: block;
+  height: 100%;
+  width: 22.5%;
+}
+
 .jstest{
   width: 100%;
   height: 100%;
-  background-color: #7986ff;
+  background-color: #d64737;
 }
 
 /* Main */
@@ -39,7 +45,7 @@ body {
 }
 
 .mainnav{
-  background-color: #7986ff;
+  background-color: #d64737;
   padding-top: 0;
   padding-bottom: 0;
 }

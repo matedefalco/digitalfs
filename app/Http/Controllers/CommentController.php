@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use Illuminate\Http\Request;
+use App\User;
 
 class CommentController extends Controller
 {
@@ -91,5 +92,43 @@ class CommentController extends Controller
       }, $comentarios);
       dd($comentariosConUser);
       return $comentarios;
+    }
+
+    public function searchall($post_ids, $offset)
+    {
+      $posts_idsdeserial = unserialize($post_ids);
+      $data = [
+        "comments" => array(
+              "comment" => array(),
+              "comment_id" => array(),
+              "post_id" => array(),
+              "user_id" => array()
+        ),
+        "users" => array(
+              "avatar" => array(),
+              "name" => array(),
+              "user_id" => array()
+        ),
+      ];
+      foreach ($posts_idsdeserial as $id) {
+        $temp_comments = Comment::where('post_id', $id)->get();
+        foreach ($temp_comments as $temp_comment) {
+          dd($temp_comment);
+          $data["comments"]["comment_id"] = $temp_comment->id;
+          $data["comments"]["comment"] = $temp_comment->comment;
+          $data["comments"]["post_id"] = $temp_comment->post_id;
+          $data["comments"]["user_id"] = $temp_comment->user_id;
+
+          $temp_user = User::where('id', $temp_comment->user_id)->get()->first();
+          $data["users"]["user_id"] = $temp_user->id;
+          $data["users"]["name"] = $temp_user->name;
+          $data["users"]["avatar"] = $temp_user->avatar;
+        }
+
+      }
+      dd($data);
+
+      return $data;
+
     }
 }

@@ -18,3 +18,4 @@ use Illuminate\Http\Request;
 //});
 // Route::get('/post/show/{id}', 'UnPostController@show');
 Route::get('/comment/post/{id}','CommentController@search');
+Route::get('/comment/post/{post_ids}/{offset}','CommentController@searchall');

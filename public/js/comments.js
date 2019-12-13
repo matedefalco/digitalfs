@@ -2,6 +2,30 @@ window.onload = function(){
 
 var verMas = document.querySelector('.verMas');
 
+verMas.addEventListener('click', function(){
+  preventDefault();
+  fetch(verMas.href)
+  .then(function (response){
+    return response.json();
+  })
+  .then(function (data){
+
+  })
+  .catch(function(error){
+    console.log("the error was: " + error)
+  })
+
+      document.querySelector('.comments').innerHTML += choclo;
+    }
+
+
+
+  })
+})
+
+
+}
+
 verMas.addEventListener('click', function(e){
   // e.preventDefault();
   fetch(verMas.href)
@@ -30,5 +54,3 @@ verMas.addEventListener('click', function(e){
 
   })
 })
-
-}
