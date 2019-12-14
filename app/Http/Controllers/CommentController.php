@@ -125,9 +125,7 @@ class CommentController extends Controller
         }
 
       }
-      return response()->json([
-      $data
-      ]);
+      return $data;
 
     }
 }

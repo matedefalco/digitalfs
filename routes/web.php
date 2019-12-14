@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::post('/postear', 'PostController@store');
 //Vistas
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 Route::get('/post','PostController@index');
 Route::get('/message','MessageController@index');
 //Individuales
@@ -28,3 +28,7 @@ Route::get('/post/{id}', 'UnPostController@index');
 //Crear
 Route::get('/crearPost','PostController@create');
 Route::post('/crearPost','PostController@store');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('/', 'HomeController@index');
+});
