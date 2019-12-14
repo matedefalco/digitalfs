@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::post('/postear', 'PostController@store');
 //Vistas
-Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 Route::get('/post','PostController@index');
 Route::get('/message','MessageController@index');
 //Individuales
