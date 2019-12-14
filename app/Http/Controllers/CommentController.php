@@ -113,22 +113,21 @@ class CommentController extends Controller
       foreach ($posts_idsdeserial as $id) {
         $temp_comments = Comment::where('post_id', $id)->get();
         foreach ($temp_comments as $temp_comment) {
-          dd($temp_comment);
-          $data["comments"]["comment_id"] = $temp_comment->id;
-          $data["comments"]["comment"] = $temp_comment->comment;
-          $data["comments"]["post_id"] = $temp_comment->post_id;
-          $data["comments"]["user_id"] = $temp_comment->user_id;
+          $data["comments"]["comment_id"][] = $temp_comment->id;
+          $data["comments"]["comment"][] = $temp_comment->comment;
+          $data["comments"]["post_id"][] = $temp_comment->post_id;
+          $data["comments"]["user_id"][] = $temp_comment->user_id;
 
           $temp_user = User::where('id', $temp_comment->user_id)->get()->first();
-          $data["users"]["user_id"] = $temp_user->id;
-          $data["users"]["name"] = $temp_user->name;
-          $data["users"]["avatar"] = $temp_user->avatar;
+          $data["users"]["user_id"][] = $temp_user->id;
+          $data["users"]["name"][] = $temp_user->name;
+          $data["users"]["avatar"][] = $temp_user->avatar;
         }
 
       }
-      dd($data);
-
-      return $data;
+      return response()->json([
+      $data
+      ]);
 
     }
 }

@@ -1,56 +1,57 @@
 window.onload = function(){
-
+console.log("hola");
 var verMas = document.querySelector('.verMas');
 
-verMas.addEventListener('click', function(){
-  preventDefault();
+verMas.onclick = function(e){
+  console.log("hola");
+  e.preventDefault();
+  var href = fetch(verMas.href);
   fetch(verMas.href)
   .then(function (response){
     return response.json();
   })
-  .then(function (data){
+  $.get( href, function( json ) {
+
+    var data = json.results;
+
+    var part1 = `<div class="row">
+      <div class="avatarContainer col-2">`;
+    var part3 = `</div>
+    <div class="namecontainer col-3">`;
+    var part5 = `</div>
+    <div class="col-7">`;
+    var part7 = `</div>
+  </div>`;
+
+    for(var i = 0; i > 5; i++)
+    {
+      var part2_1 = `<img class="user_img" src="/storage/avatar_img/`;
+      var part2_2 = data["users"]["avatar"][i];
+      var part2_3 = `"alt="user img">`;
+
+      var part4_1 = `<a class="username" href="/user/`;
+      var part4_2 = data["users"]["user_id"][i];
+      var part4_3 = `">`;
+      var part4_4 = data["users"]["name"][i];
+      var part4_5 = `</a>
+    </div>
+    <div class="col-7">`;
+
+      var part6_1 = data["users"]["name"][i];
+      var part6_2 = `</div>
+    </div>`
+      var allparts = part1 + part2_1 + part2_2 + part2_3 + part3 + part4_1 + part4_2 + part4_3 + part4_4 + part4_5 + part5 + part6_1 + part6_2;
+      document.querySelector('.comments').innerHTML += allparts;
+    }
 
   })
   .catch(function(error){
     console.log("the error was: " + error)
   })
 
-      document.querySelector('.comments').innerHTML += choclo;
+
     }
 
 
 
-  })
-})
-
-
-}
-
-verMas.addEventListener('click', function(e){
-  // e.preventDefault();
-  fetch(verMas.href)
-  .then(res => res.json())
-  .then(function (data){
-    console.log(data);
-    for (var i = 2; i < data.length; i++) {
-      var comment = data[i];
-      var choclo = `<div class="row">
-        <div class="avatarContainer col-2">
-          <img class="user_img" src="/storage/avatar_img/{{$comment->user->avatar}}"alt="user img">
-        </div>
-        <div class="namecontainer col-3">
-          <a class="username" href="/user/{{$comment->user->id}}">{{$comment->user->name}}</a>
-        </div>
-        <div class="col-7">
-          {{$comment->comment}}
-        </div>
-      </div>
-      <br>`
-
-      document.querySelector('.comments').innerHTML += choclo
-    }
-
-
-
-  })
-})
+  }
