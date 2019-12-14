@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::post('/postear', 'PostController@store');
 //Vistas
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name("/home");
 Route::get('/post','PostController@index');
 Route::get('/message','MessageController@index');
 //Individuales
@@ -30,5 +30,5 @@ Route::get('/crearPost','PostController@create');
 Route::post('/crearPost','PostController@store');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('/', 'HomeController@index');
+    Route::resource('/home', 'HomeController@index');
 });

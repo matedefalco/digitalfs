@@ -3,6 +3,11 @@
 @section('content')
 
   <?php
+  if(Auth::user() == null){
+    header("Location: /home", true, 301);
+    exit();
+  }
+
     $user = Auth::user();
     $id = Auth::id();
     $count = 0;
