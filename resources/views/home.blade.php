@@ -3,9 +3,9 @@
 @section('content')
 
   <?php
+  $authed = true;
   if(Auth::user() == null){
-    header("Location: /home", true, 301);
-    exit();
+    $authed = false;
   }
 
     $user = Auth::user();
@@ -59,6 +59,7 @@
         </article>
       @endforeach
     </div>
+    @if($authed == true)
     <div class="column col-m-4 col-lg-4">
       <div class="userColumn row">
         <div class="avatarColumn col-5">
@@ -72,6 +73,7 @@
 
       </div>
     </div>
+    @endif
     </section>
     <div id="targetElement"class="col-12">
 
