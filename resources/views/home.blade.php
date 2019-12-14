@@ -36,7 +36,6 @@
   <section class='feed row'>
     <div class="articles col-sm-12 col-m-8 col-lg-8">
       @foreach($posts as $post)
-        @break($count >= 10)
         <article class='post col-12'>
 
           <div class="userContainer row">
