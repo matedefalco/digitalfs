@@ -240,6 +240,24 @@ a, a:hover, a:focus, a:active {
   color: #999;
 }
 
+.formMensaje{
+  color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  overflow: hidden;
+}
+
+.inputMensaje{
+  border-radius: 3px;
+  color: white;
+  float: left;
+  width: 20%;
+}
+
+.messageImg{
+  float: left;
+  width: 80;
+}
+
 /* MEDIA QUERIES */
 
 

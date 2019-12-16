@@ -13,9 +13,10 @@
     <span class="time-left">TIEMPO DEL MENSAJE</span>
   </div>
   <footer>
-    <form class="" action="messages" method="post">
+    <form class="container formMensaje" action="messages" enctype="multipart/form-data" method="post">
       @csrf
-      <input type="text" name="message" value="">
+      <i class="la la-camera fa-3x col-2"><input id="avatar" type="file" class="messageImg form-control {{--@error('avatar') is-invalid @enderror--}}" name="content" value=""></i>
+      <input class="inputMensaje" type="text" name="message" value="">
     </form>
   </footer>
 @endsection
