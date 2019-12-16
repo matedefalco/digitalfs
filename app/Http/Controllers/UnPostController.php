@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
 
-class UnPostController extends Controller
-{
+class UnPostController extends Controller {
+
+  public $likes = 0;
     /**
      * Display a listing of the resource.
      *
@@ -86,5 +87,10 @@ class UnPostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // Likes
+    public function lilkes(){
+      $likes +1;
     }
 }

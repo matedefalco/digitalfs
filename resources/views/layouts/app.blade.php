@@ -86,7 +86,7 @@
         <a href="/"><i class="barra las la-igloo fa-3x col-2"></i></a>
         <a href="#"><i class="la la-camera fa-3x col-2"></i></a>
         <a href="/crearPost"><i class="barra la la-plus fa-3x col-2"></i></a>
-        <a href="#"><i class="barra la la-comments fa-3x col-2"></i></a>
+        <a href="/message"><i class="barra la la-comments fa-3x col-2"></i></a>
         <a href="/user/"{{--{{$currentUser->id}}--}}><i class="barra la la-user-circle fa-3x col-2"></i></a>
       </footer>
     </div>

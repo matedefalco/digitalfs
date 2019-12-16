@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Message;
+use App\User;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -35,7 +36,21 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request,
+      [
+        'content' => ['required'],
+      ],
+      [
+        'required' => 'Write something, come on',
+      ]);
+      $message = new Message;
+
+      $message->content = $request->file_get_contents
+      $message->user_reciever = $user;
+      $message->user_sender = $user;
+      $message->date = ;
+
+      $message->save();
     }
 
     /**

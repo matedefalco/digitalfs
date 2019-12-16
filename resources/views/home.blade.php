@@ -66,7 +66,7 @@
           <img class="user_img_column" src="/storage/avatar_img/{{$user->avatar}}"alt="user img">
         </div>
         <div class="nameColumn col-7">
-          <a class="usernameColumn" href="/user/{{$id}}">{{$user->name}}</a>
+          <a class="usernameColumn" href="/user/{{$id}}"{{$user->name}}</a>
         </div>
       </div>
       <div class="extrasColumn row">
