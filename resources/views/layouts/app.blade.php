@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Gelasio|Ubuntu:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,7 +29,7 @@
     <div id="app">
       <nav class="mainnav navbar navbar-expand-md navbar-light shadow-sm">
           <div class="container">
-              <a class="navbar-brand hometitle"href="/">
+              <a class="navbar-brand hometitle"href="/"style="width:82%">
                   <img class="hometitleimage" src="/storage/logo/lentilogo.png" alt="home title image">
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -86,8 +86,8 @@
         <a href="/"><i class="barra las la-igloo fa-3x col-2"></i></a>
         <a href="#"><i class="la la-camera fa-3x col-2"></i></a>
         <a href="/crearPost"><i class="barra la la-plus fa-3x col-2"></i></a>
-        <a href="/message"><i class="barra la la-comments fa-3x col-2"></i></a>
-        <a href="/user/"{{--{{$currentUser->id}}--}}><i class="barra la la-user-circle fa-3x col-2"></i></a>
+        <a href="/message"><i class="barra fas fa-comments fa-3x col-2"></i></a>
+        <a href="/user/"{{Auth::id()}}><i class="barra la la-user-circle fa-3x col-2"></i></a>
       </footer>
     </div>
 </body>

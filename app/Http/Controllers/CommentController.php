@@ -125,7 +125,7 @@ class CommentController extends Controller
         }
 
       }
-      return $data->reverse();
+      return array_reverse($data);
 
     }
 }
