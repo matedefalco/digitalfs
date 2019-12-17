@@ -14,7 +14,7 @@
   <script src="/js/main.js" charset="utf-8"></script>
 
   <section class='feed row'>
-    <div class="column col-m-2 col-lg-2">
+    {{-- <div class="column col-m-2 col-lg-2"> --}}
     <div class="articles col-sm-12 col-m-8 col-lg-8 target">
       @foreach($posts as $post)
         <article class='post col-12'>
@@ -62,7 +62,7 @@
     </div>
 
     @if($authed == true)
-    <div class="column col-m-2 col-lg-2">
+    <div class="column col-m-4 col-lg-4">
       <div class="userColumn row">
         <div class="avatarColumn col-5">
           <img class="user_img_column" src="/storage/avatar_img/{{$user->avatar}}"alt="user img">
