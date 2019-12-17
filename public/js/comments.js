@@ -11,9 +11,9 @@ verMas.onclick = function(e){
     var part1 = `<div class="row">
       <div class="avatarContainer col-2">`;
     var part3 = `</div>
-    <div class="namecontainer col-3">`;
+    <div class="namecontainer col-5">`;
     var part5 = `</div>
-    <div class="col-7">`;
+    <div class="col-5">`;
     var part7 = `</div>
   </div>
   <br>`;
