@@ -43,6 +43,23 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* User */
+.userMaster{
+  overflow: hidden;
+}
+
+.userAvatar{
+  display: inline-block;
+  float: left;
+  width:50%;
+  border-radius: 4px;
+  box-shadow: 3px;
+}
+.userNombre{
+width: 50%;
+float:left;
+}
+
 /* Main */
 .hometitle{
   font-size: 1.75rem;

@@ -1,9 +1,11 @@
 @extends('layouts.app')
 @section('content')
 {{-- @dd($user); --}}
+<div class="container userMaster">
   <img class ="userAvatar" src="/storage/avatar_img/{{$user->avatar}}" alt="">
   <br>
   <h1 class="userNombre">{{$user->name}}</h1>
+</div>
 
 
 <?php $count = 0; ?>
