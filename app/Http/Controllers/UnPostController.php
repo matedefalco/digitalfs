@@ -40,7 +40,7 @@ class UnPostController extends Controller {
      */
     public function store(Request $request)
     {
-      
+
     }
 
     /**
@@ -51,9 +51,9 @@ class UnPostController extends Controller {
      */
     public function show($id)
     {
-      // $post = Post::where("id", "=", $id )->get()->first();
-      // $comments = Comment::where('post_id', '=', $post->id)->get();
-      // return {$post, $comments};
+      $post = Post::find($id);
+
+      return view('edit', compact('post'));
     }
 
     /**
@@ -62,10 +62,6 @@ class UnPostController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        return view('edit');
-    }
 
     /**
      * Update the specified resource in storage.
@@ -76,7 +72,14 @@ class UnPostController extends Controller {
      */
     public function update(Request $request, $id)
     {
-        //
+      $post = Post::find($id);
+
+      $post->description = $request->description;
+
+
+      $post->save();
+
+      return redirect('/inicio');
     }
 
     /**
@@ -88,8 +91,8 @@ class UnPostController extends Controller {
     public function destroy($id)
     {
       $post = Post::find($id);
-      $post->destroy();
-      redirect('/');
+      $post->delete();
+      return redirect('/inicio');
     }
 
     // Likes

@@ -2,7 +2,7 @@
 @section('content')
 
   <h1>Your previous description</h1>
-    {{$posts->description}}
+    {{$post->description}}
   <h2>Now write your new description</h2>
   <form class="" action="/edit" method="post">
     @csrf
