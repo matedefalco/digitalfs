@@ -46,6 +46,7 @@ body {
 /* User */
 .userMaster{
   overflow: hidden;
+  width:100%;
 }
 
 .userAvatar{
