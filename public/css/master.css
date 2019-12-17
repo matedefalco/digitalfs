@@ -221,13 +221,13 @@ a, a:hover, a:focus, a:active {
 
 /* MESSAGES */
 /* Chat containers */
-.container {
+/* .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
-}
+} */
 
 /* Darker chat container */
 .darker {
@@ -243,13 +243,13 @@ a, a:hover, a:focus, a:active {
 }
 
 /* Style images */
-.container img {
+/* .container img {
   float: left;
   max-width: 50%;
   width: 100%;
   margin-right: 20px;
   border-radius: 50%;
-}
+} */
 
 /* Style the right image */
 .container img.right {
