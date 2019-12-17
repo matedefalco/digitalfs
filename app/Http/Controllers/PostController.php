@@ -57,7 +57,7 @@ class PostController extends Controller
       $post->img = $nombreImg;
       $post->save();
 
-      return redirect('/');
+      return redirect('/inicio');
 
     }
 
