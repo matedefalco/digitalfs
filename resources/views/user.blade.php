@@ -3,7 +3,6 @@
 {{-- @dd($user); --}}
 <div class="container userMaster">
   <img class ="userAvatar" src="/storage/avatar_img/{{$user->avatar}}" alt="">
-  <br>
   <h1 class="userNombre">{{$user->name}}</h1>
 </div>
 
@@ -15,7 +14,7 @@
     @forelse ($posts as $post)
 
       <?php if($count == 0){ ?>
-        <div class='usercontainer col-12'>
+        <div class='align-middle usercontainer col-12'>
           <div class="row">
             <div class="avatarContainer col-3">
               <img class="user_img" src="/storage/avatar_img/{{$post->user->avatar}}"alt="user img">
