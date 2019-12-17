@@ -70,9 +70,9 @@ class UnPostController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-      $post = Post::find($id);
+      $post = Post::find($request->id);
 
       $post->description = $request->description;
 
