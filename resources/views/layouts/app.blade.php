@@ -28,7 +28,7 @@
 <body>
     <div id="app">
       <nav class="mainnav navbar navbar-expand-md navbar-light shadow-sm">
-              <a class="navbar-brand hometitle"href="/"style="width:82%">
+              <a class="navbar-brand hometitle"href="/">
                   <img class="hometitleimage" src="/storage/logo/lentilogo.png" alt="home title image">
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

@@ -73,8 +73,10 @@
 
     </section>
 
-    <div class="pageButtonDiv row">
-      <a href="/api/page/1" class="pagebutton col-6 btn btn-outline-success">Load More</a>
+    <div class="pageButtonDiv justify-content-center row">
+      <a href="/api/page/1" class="pagebutton justify-content-center col-sm-12 col-m-6 col-lg-4 d-flex btn btn-outline-success">Load More</a>
     </div>
-
+    <br>
+    <br>
+    <br>
 @endsection

@@ -1,6 +1,14 @@
 @extends('layouts.app')
 @section('content')
 
+<?php
+if(Auth::user() == null){
+  header("Location:/");
+  exit;
+}
+
+?>
+
 {{-- Caja gris arriba de section blanco --}}
 <div class="crearPostGris">
   {{-- Caja blanca arriba fondo gris --}}
