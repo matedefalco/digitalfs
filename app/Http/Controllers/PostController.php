@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 use Auth;
+use ImageOptimizer;
 
 class PostController extends Controller
 {
@@ -50,12 +51,11 @@ class PostController extends Controller
 
       $post->description = $request->description;
       $post->user_id = Auth::user()->id;
-      $ruta = $request->file('image')->store('public/post_img');
+      ImageOptimizer::optimize($request->file('image'));
+      $ruta = $request->file('image')->store('/public/post_img');
       $nombreImg = basename($ruta);
       $post->img = $nombreImg;
-
       $post->save();
-
 
       return redirect('/');
 
