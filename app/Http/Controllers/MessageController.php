@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Message;
-use App\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class MessageController extends Controller
 {
@@ -15,7 +15,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        return view('message');
+      $messages = Message::
+        return view('mesage');
     }
 
     /**
@@ -45,10 +46,9 @@ class MessageController extends Controller
       ]);
       $message = new Message;
 
-      $message->content = $request->file_get_contents
+      $message->content = $request->content;
       $message->user_reciever = $user;
-      $message->user_sender = $user;
-      $message->date = ;
+      $message->user_sender = Auth::user()->id;
 
       $message->save();
     }

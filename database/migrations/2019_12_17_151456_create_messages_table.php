@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAvatarToUsersTable extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddAvatarToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('avatar', 300)->nullable();
+        Schema::create('messages', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->text('content');
+            $table->string('userReciever');
+            $table->string('userSender');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class AddAvatarToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-          $table->dropColumn('avatar');
-        });
+        Schema::dropIfExists('messages');
     }
 }

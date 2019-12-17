@@ -28,6 +28,7 @@ Route::get('/post/{id}', 'UnPostController@index');
 //Crear
 Route::get('/crearPost','PostController@create');
 Route::post('/crearPost','PostController@store');
+Route::post('/message','MessageController@store');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('/home', 'HomeController@index');
