@@ -43,19 +43,15 @@
           </div>
 
           {{-- Username --}}
-          <div class="namecontainer col-3">
+          <div class="namecontainer col-5">
             <a class="username" href="/user/{{$comment->user->id}}">{{$comment->user->name}}</a>
           </div>
 
-        </div>
-
-        <br>
-
-        <div class="row">
           {{-- Comentario --}}
-          <div class="col-7">
+          <div class="col-5">
             {{$comment->comment}}
           </div>
+
         </div>
         <br>
       @endforeach
