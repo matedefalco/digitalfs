@@ -47,12 +47,15 @@
             <a class="username" href="/user/{{$comment->user->id}}">{{$comment->user->name}}</a>
           </div>
 
-            <br>
-            {{-- Comentario --}}
-          <div class="row col-7">
+        </div>
+
+        <br>
+
+        <div class="row">
+          {{-- Comentario --}}
+          <div class="col-7">
             {{$comment->comment}}
           </div>
-
         </div>
         <br>
       @endforeach
