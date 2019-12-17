@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comment;
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class CommentController extends Controller
 {
@@ -25,7 +26,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+      return view('comment');
     }
 
     /**
@@ -36,7 +37,15 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $comment = new Comment;
+
+      $comment->user_id = Auth::user()->id;
+      $comment->post_id = $request->id;
+      $comment->comment = $request->comment;
+
+      $comment->save();
+
+      return redirect('/inicio');
     }
 
     /**

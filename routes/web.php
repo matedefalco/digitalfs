@@ -31,7 +31,9 @@ Route::get('/post/{id}', 'UnPostController@index')->middleware('auth');
 //Crear
 Route::get('/crearPost','PostController@create')->middleware('auth');
 Route::post('/crearPost','PostController@store')->middleware('auth');
-Route::post('/message','MessageController@store')->middleware('auth');
+Route::post('/comment','CommentController@store')->middleware('auth');
+
+
 //Editar
 Route::post('/edit','UnPostController@update')->middleware('auth');
 

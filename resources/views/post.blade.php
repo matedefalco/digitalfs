@@ -24,8 +24,15 @@
           <img src="/storage/post_img/{{$post->img}}" class="main_img" alt="main image">
         </div>
         @include('icons')
-
     </article>
+
+    <form class="" action="/comment" method="post">
+    @csrf
+    <input type="hidden" name="id" value="{{$post->id}}">
+    <input type="text" name="comment" placeholder="Write here" value="">
+    <button type="submit" name="button">Comment</button>
+    </form>
+
     <div class="comments col-8">
       @foreach($comments as $comment)
         <div class="row">
