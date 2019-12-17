@@ -21,6 +21,9 @@ html {
 body {
   height: 100%;
   font-family: 'Ubuntu','Gelasio', sans-serif;
+  display: grid
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
 }
 
 .hometitle{

@@ -30,7 +30,7 @@
     @csrf
     <input type="hidden" name="id" value="{{$post->id}}">
     <input type="text" name="comment" placeholder="Write here" value="">
-    <button type="submit" name="button">Comment</button>
+    <button class="btn btn-primary" type="submit" name="button">Comment</button>
     </form>
 
     <div class="comments col-8">
