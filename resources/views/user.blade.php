@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-  <img class ="userAvatar" src="/storage/avatar_img/{{$post->user->avatar}}" alt="">
+  <img class ="userAvatar" src="/storage/avatar_img/{{$user->avatar}}" alt="">
   <br>
   <h1 class="userNombre">{{$user->name}}</h1>
 
