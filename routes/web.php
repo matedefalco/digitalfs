@@ -24,7 +24,7 @@ Route::get('/inicio', 'HomeController@index')->name("home")->middleware('auth');
 Route::get('/post','PostController@index')->middleware('auth');
 Route::get('/message','MessageController@index')->middleware('auth');
 Route::get('/edit/{id}','UnPostController@show')->middleware('auth');
-Route::get('/destroy/{id}','UnPostController@delete')->middleware('auth');
+Route::get('/destroy/{id}','UnPostController@destroy')->middleware('auth');
 //Individuales
 Route::get('/user/{id}', 'UserController@index')->middleware('auth');
 Route::get('/post/{id}', 'UnPostController@index')->middleware('auth');
