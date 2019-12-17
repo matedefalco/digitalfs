@@ -46,6 +46,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Comments */
+.formComments{
+  margin-bottom: 3px;
+}
+
 /* MESSAGES */
 /* Chat containers */
 .container {
@@ -394,9 +399,9 @@ a, a:hover, a:focus, a:active {
     width: 17.5%;
   }
 
-  .bottom_nav{
+  /* .bottom_nav{
     display: none;
-  }
+  } */
 
   .container-fluid{
     width: 52%;
@@ -419,9 +424,9 @@ a, a:hover, a:focus, a:active {
     width: 12.5%;
   }
 
-  .bottom_nav{
+  /* .bottom_nav{
     display: none;
-  }
+  } */
 
   .container-fluid{
     width: 52%;

@@ -26,7 +26,7 @@
         @include('icons')
     </article>
 
-    <form class="" action="/comment" method="post">
+    <form class="formComments" action="/comment" method="post">
     @csrf
     <input type="hidden" name="id" value="{{$post->id}}">
     <input type="text" name="comment" value="" placeholder="Write here">
