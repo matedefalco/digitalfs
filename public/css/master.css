@@ -45,6 +45,24 @@ body {
 .welcome{
   font-family: 'Roboto', sans-serif;
 }
+/* Comment */
+.inp{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+  //transform: rotateX(45deg) rotateY(-10deg) rotate(25deg) scale(2);
+}
+.label{
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 16px;
+    color: #9098A9;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all .2s ease;
+  }
 
 /* MESSAGES */
 /* Chat containers */
