@@ -33,6 +33,8 @@
     <button class="btn btn-primary" type="submit" name="button">Comment</button>
     </form>
 
+    <br>
+
     <div class="comments col-8">
       @foreach($comments as $comment)
         <div class="row">
