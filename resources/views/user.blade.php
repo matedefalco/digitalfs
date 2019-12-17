@@ -13,7 +13,7 @@
 
     @forelse ($posts as $post)
 
-      <?php if($count == 0){ ?>
+      {{-- <?php if($count == 0){ ?>
         <div class='usercontainer col-12'>
           <div class="row">
             <div class="avatarContainer col-3">
@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <?php } ?>
+        <?php } ?> --}}
         <article class='post col-xs-12 col-md-6 col-lg-6'>
 
           <div class="mainImageContainer">
