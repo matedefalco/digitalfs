@@ -1,11 +1,16 @@
 @extends('layouts.app')
 @section('content')
 
+  <img class ="userAvatar" src="/storage/avatar_img/{{$post->user->avatar}}" alt="">
+  <br>
+  <h1 class="userNombre">{{$user->name}}</h1>
+
 
 <?php $count = 0; ?>
 
   <section class='feed row align-items-center'>
-    @foreach($posts as $post)
+
+    @forelse ($posts as $post)
 
       <?php if($count == 0){ ?>
         <div class='usercontainer col-12'>
@@ -18,21 +23,26 @@
             </div>
           </div>
         </div>
-      <?php } ?>
-      <article class='post col-xs-12 col-md-6 col-lg-6'>
+        <?php } ?>
+        <article class='post col-xs-12 col-md-6 col-lg-6'>
 
-        <div class="mainImageContainer">
-          <a href="/post/{{$post->id}}">
-            <img src="/storage/post_img/{{$post->img}}" class="main_img" alt="main image">
-          </a>
-        </div>
+          <div class="mainImageContainer">
+            <a href="/post/{{$post->id}}">
+              <img src="/storage/post_img/{{$post->img}}" class="main_img" alt="main image">
+            </a>
+          </div>
 
-      @include('icons')
+          @include('icons')
 
-      </article>
-      <?php $count++; ?>
-    @endforeach
+        </article>
+        <?php $count++; ?>
     </section>
-    
+
+    @empty
+      <br>
+      <h1>This user haven't posted anything yet</h1>
+    @endforelse
+
+
 
 @endsection
