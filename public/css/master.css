@@ -42,8 +42,16 @@ body {
 }
 
 /* Welcome */
-.welcome{
+.welcome1{
   font-family: 'Roboto', sans-serif;
+}
+
+.welcome2{
+  font-family: 'Lilita One', cursive;
+}
+
+.welcome3{
+  margin-bottom: 3px;
 }
 
 /* Comments */
