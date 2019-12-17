@@ -7,7 +7,7 @@
   <form class="" action="/edit" method="post">
     @csrf
     <input type="hidden" name="id" value="{{$post->id}}">
-    <input type="text" name="newDesc" value="">
+    <input type="text" name="description" value="">
     <button type="submit" name="button">Submit</button>
   </form>
 @endsection
