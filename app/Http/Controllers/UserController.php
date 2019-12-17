@@ -11,6 +11,7 @@ class UserController extends Controller
   public function index($id)
   {
     $posts = Post::where("user_id", "=", $id )->get();
-    return view('user', compact('posts'));
+    $user = User:where('id', '=',$id);
+    return view('user', compact('posts','user'));
   }
 }

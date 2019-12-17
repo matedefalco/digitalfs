@@ -3,7 +3,7 @@
 
   <img class ="userAvatar" src="/storage/avatar_img/{{$user->avatar}}" alt="">
   <br>
-  <h1 class="userNombre">{{$user->name}}</h1>
+  <h1 class="userNombre">{{$user->avatar}}</h1>
 
 
 <?php $count = 0; ?>
