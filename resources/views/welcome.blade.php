@@ -8,8 +8,13 @@
           </div>
 
           <div class="links">
+            <button type="button" class="btn btn-info">
               <a href="{{ route('register') }}">Register</a>
+            </button>
+
+            <button type="button" class="btn btn-info">
               <a href="{{ route('login') }}">Log in</a>
+            </button>
           </div>
       </div>
 @endsection
