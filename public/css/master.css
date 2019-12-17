@@ -57,6 +57,7 @@ body {
 }
 .userNombre{
 float:left;
+text-align: justify;
 }
 
 /* Main */
