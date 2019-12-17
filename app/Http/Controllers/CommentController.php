@@ -45,7 +45,7 @@ class CommentController extends Controller
 
       $comment->save();
 
-      return redirect('/inicio');
+      return back();
     }
 
     /**
