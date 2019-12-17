@@ -43,6 +43,76 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* MESSAGES */
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  /* padding: 10px; */
+  /* margin: 10px 0; */
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 50%;
+  height: auto;
+  /* margin-right: 20px; */
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+.formMensaje{
+  color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  overflow: hidden;
+}
+
+.inputMensaje{
+  border-radius: 3px;
+  color: white;
+  float: left;
+  width: 20%;
+}
+
+.messageImg{
+  float: left;
+  width: 80;
+}
+
 /* User */
 .userMaster{
   overflow: hidden;
@@ -51,12 +121,8 @@ body {
   margin-bottom: 15px;
 }
 
-.container img{
-  max-width: 50%;
-}
-
 .userAvatar{
-  max-width: 50%;
+  max-width: 40%;
   float: left;
   border-radius: 4px;
 }
@@ -218,76 +284,6 @@ a, a:hover, a:focus, a:active {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-/* MESSAGES */
-/* Chat containers */
-.container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 5px;
-  /* padding: 10px; */
-  /* margin: 10px 0; */
-}
-
-/* Darker chat container */
-.darker {
-  border-color: #ccc;
-  background-color: #ddd;
-}
-
-/* Clear floats */
-.container::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Style images */
-.container img {
-  float: left;
-  max-width: 50%;
-  height: auto;
-  /* margin-right: 20px; */
-  border-radius: 50%;
-}
-
-/* Style the right image */
-.container img.right {
-  float: right;
-  margin-left: 20px;
-  margin-right:0;
-}
-
-/* Style time text */
-.time-right {
-  float: right;
-  color: #aaa;
-}
-
-/* Style time text */
-.time-left {
-  float: left;
-  color: #999;
-}
-
-.formMensaje{
-  color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  overflow: hidden;
-}
-
-.inputMensaje{
-  border-radius: 3px;
-  color: white;
-  float: left;
-  width: 20%;
-}
-
-.messageImg{
-  float: left;
-  width: 80;
 }
 
 /* MEDIA QUERIES */
