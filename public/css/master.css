@@ -122,7 +122,8 @@ body {
 }
 
 .userAvatar{
-  max-width: 40%;
+  max-width: 50%;
+  height: auto;
   float: left;
   border-radius: 50%;
 }
