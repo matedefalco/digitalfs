@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-@dd($user);
+{{-- @dd($user); --}}
   <img class ="userAvatar" src="/storage/avatar_img/{{$user->avatar}}" alt="">
   <br>
   <h1 class="userNombre">{{$user->avatar}}</h1>
