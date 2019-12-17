@@ -38,6 +38,11 @@ body {
   background-color: #d64737;
 }
 
+/* Welcome */
+.welcome{
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Main */
 .hometitle{
   font-size: 1.75rem;
