@@ -51,7 +51,7 @@ class PostController extends Controller
 
       $post->description = $request->description;
       $post->user_id = Auth::user()->id;
-      ImageOptimizer::optimize($request->file('image'));
+      // ImageOptimizer::optimize($request->file('image'));
       $ruta = $request->file('image')->store('/public/post_img');
       $nombreImg = basename($ruta);
       $post->img = $nombreImg;
