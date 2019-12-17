@@ -7,4 +7,6 @@
   <form class="" action="/edit" method="post">
     @csrf
     <input type="text" name="newDesc" value="">
+    <button type="submit" name="button">Submit</button>
   </form>
+@endsection
