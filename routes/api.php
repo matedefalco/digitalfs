@@ -16,6 +16,6 @@ use Illuminate\Http\Request;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
-// Route::get('/post/show/{id}', 'UnPostController@show');
 Route::get('/comment/post/{id}','CommentController@search');
 Route::get('/comment/post/{post_ids}/{offset}','CommentController@searchall');
+Route::get('/page/{pageoffset}','HomeController@changepage');

@@ -28,7 +28,6 @@
 <body>
     <div id="app">
       <nav class="mainnav navbar navbar-expand-md navbar-light shadow-sm">
-          <div class="container">
               <a class="navbar-brand hometitle"href="/"style="width:82%">
                   <img class="hometitleimage" src="/storage/logo/lentilogo.png" alt="home title image">
               </a>
@@ -75,7 +74,6 @@
                       @endguest
                   </ul>
               </div>
-          </div>
       </nav>
       <main class="backgroundcolor">
         <div class="py-4 container-fluid maincontainer">

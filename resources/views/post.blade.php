@@ -42,7 +42,7 @@
         <br>
       @endforeach
 
-      <a href="/api/comment/post/{{$outputarray}}/{{$offset}}" class="verMas">Show more</a>
+      <a href="/api/comment/post/{{$outputarray}}/{{$offset}}" class="verMas">More comments</a>
     </div>
   </section>
 
