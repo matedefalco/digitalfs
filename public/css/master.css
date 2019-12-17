@@ -48,10 +48,10 @@ body {
   overflow: hidden;
   position: relative;
   width:100%;
+  max-width: 50%;
 }
 
 .userAvatar{
-  display: inline-block;
   max-width: 50%;
   float: left;
   border-radius: 4px;
