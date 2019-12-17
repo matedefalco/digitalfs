@@ -2,14 +2,14 @@
 @section('content')
 {{-- @dd($user); --}}
 <div class="container userMaster">
-  <img class ="userAvatar" src="/storage/avatar_img/{{$user->avatar}}" alt="">
-  <h1 class="userNombre">{{$user->name}}</h1>
+  <img class ="userAvatar float-left" src="/storage/avatar_img/{{$user->avatar}}" alt="">
+  <h1 class="userNombre float-right">{{$user->name}}</h1>
 </div>
 
 
 <?php $count = 0; ?>
 
-  <section class='feed row align-middle align-items-center'>
+  <section class='feed row align-items-center'>
 
     @forelse ($posts as $post)
 
