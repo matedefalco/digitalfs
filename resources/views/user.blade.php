@@ -13,18 +13,6 @@
 
     @forelse ($posts as $post)
 
-      {{-- <?php if($count == 0){ ?>
-        <div class='usercontainer col-12'>
-          <div class="row">
-            <div class="avatarContainer col-3">
-              <img class="user_img" src="/storage/avatar_img/{{$post->user->avatar}}"alt="user img">
-            </div>
-            <div class="namecontainer col-9">
-              <a class="username" href="/user/{{$post->user->id}}">{{$post->user->name}}</a>
-            </div>
-          </div>
-        </div>
-        <?php } ?> --}}
         <article class='post col-xs-12 col-md-6 col-lg-6'>
 
           <div class="mainImageContainer">
