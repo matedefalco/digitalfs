@@ -7,34 +7,14 @@
   if(Auth::user() == null){
     $authed = false;
   }
-
     $user = Auth::user();
     $id = Auth::id();
-    $count = 0;
   ?>
 
-  <script id="blockOfStuff" type="text/html">
-    <div class="modalmain container">
-      <div class="modalimage col-8">
-        <a href="/post/{{----}}">
-          <img src="/storage/post_img/{{----}}" class="main_img" alt="main image">
-        </a>
-      </div>
-
-      <div class="modaluser col-4">
-        <div class="modalavatar col-3">
-          <img class="modal_user_img" src="/storage/avatar_img/{{----}}"alt="user img">
-        </div>
-        <div class="modalnamecontainer col-9">
-          <a class="modalusername" href="/user/{{----}}">{{----}}</a>
-        </div>
-      </div>
-    </div>
-  </script>
-
+  <script src="/js/main.js" charset="utf-8"></script>
 
   <section class='feed row'>
-    <div class="articles col-sm-12 col-m-8 col-lg-8">
+    <div class="articles col-sm-12 col-m-8 col-lg-8 target">
       @foreach($posts as $post)
         <article class='post col-12'>
 
@@ -52,13 +32,29 @@
               <img src="/storage/post_img/{{$post->img}}" class="main_img" alt="main image">
             </a>
           </div>
-          <?php $count++;?>
 
-          @include('icons')
+          <div class="likesContainer row">
+            <a href="#" style="width:12.5%">
+              <i class="likesitem la la-thumbs-up fa-2x" style="width:100%"></i>
+            </a>
+
+            <a href="#" style="width:12.5%">
+              <i class="likesitem la la-thumbs-down fa-2x" style="width:100%"></i>
+            </a>
+
+            <a href="#" style="width:12.5%">
+              <i class="likesitem la la-share fa-2x" style="width:100%"></i>
+            </a>
+
+            <a href="#" style="width:12.5%">
+              <i class="likesitem la la-ellipsis-v fa-2x" style="width:100%"></i>
+            </a>
+          </div>
 
         </article>
       @endforeach
     </div>
+
     @if($authed == true)
     <div class="column col-m-4 col-lg-4">
       <div class="userColumn row">
@@ -74,9 +70,11 @@
       </div>
     </div>
     @endif
-    </section>
-    <div id="targetElement"class="col-12">
 
+    </section>
+
+    <div class="pageButtonDiv row">
+      <a href="/api/page/1" class="pagebutton col-6 btn btn-outline-success">Load More</a>
     </div>
 
 @endsection

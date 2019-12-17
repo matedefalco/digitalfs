@@ -1,5 +1,4 @@
 window.onload = function(){
-console.log("hola");
 var verMas = document.querySelector('.verMas');
 
 verMas.onclick = function(e){
@@ -9,7 +8,6 @@ verMas.onclick = function(e){
     return response.json();
   })
   .then(function (data){
-    console.log(data);
     var part1 = `<div class="row">
       <div class="avatarContainer col-2">`;
     var part3 = `</div>

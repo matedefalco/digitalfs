@@ -269,6 +269,10 @@ a, a:hover, a:focus, a:active {
     display: none;
   }
 
+  .hometitleimage{
+    width: 22.5%;
+  }
+
   .container-fluid{
     width: 100%;
   }
@@ -283,6 +287,10 @@ a, a:hover, a:focus, a:active {
 
   .column{
     display: block;
+  }
+
+  .hometitleimage{
+    width: 17.5%;
   }
 
   .bottom_nav{
@@ -304,6 +312,10 @@ a, a:hover, a:focus, a:active {
 
   .column{
     display: block;
+  }
+
+  .hometitleimage{
+    width: 12.5%;
   }
 
   .bottom_nav{
