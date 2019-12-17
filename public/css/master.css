@@ -124,7 +124,7 @@ body {
 .userAvatar{
   max-width: 40%;
   float: left;
-  border-radius: 4px;
+  border-radius: 50%;
 }
 .userNombre{
 float:left;

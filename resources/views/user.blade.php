@@ -2,8 +2,12 @@
 @section('content')
 {{-- @dd($user); --}}
 <div class="container userMaster">
-  <img class ="userAvatar float-left d-flex justify-content-center" src="/storage/avatar_img/{{$user->avatar}}" alt="">
-  <h1 class="userNombre float-right d-flex justify-content-center">{{$user->name}}</h1>
+  <div class="userAvatar float-left">
+    <img class ="" src="/storage/avatar_img/{{$user->avatar}}" alt="">
+  </div>
+  <div class="userNombre float-right">
+    <h1 class="">{{$user->name}}</h1>
+  </div>
 </div>
 
 
