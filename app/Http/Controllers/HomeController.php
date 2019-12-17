@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -69,6 +70,9 @@ class HomeController extends Controller
     }
 
     public function show(){
+      if(Auth::user()){
+        return redirect('/inicio');
+      }
       return view('welcome');
     }
 }

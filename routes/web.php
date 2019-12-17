@@ -20,21 +20,21 @@ Auth::routes();
 Route::post('/postear', 'PostController@store');
 //Vistas
 Route::get('/','HomeController@show');
-Route::get('/inicio', 'HomeController@index')->name("/home");
-Route::get('/post','PostController@index');
-Route::get('/message','MessageController@index');
-Route::get('/edit','UnPostController@edit');
-Route::get('/destroy','UnPostController@delete');
+Route::get('/inicio', 'HomeController@index')->name("home")->middleware('auth');
+Route::get('/post','PostController@index')->middleware('auth');
+Route::get('/message','MessageController@index')->middleware('auth');
+Route::get('/edit/{id}','UnPostController@edit')->middleware('auth');
+Route::get('/destroy/{id}','UnPostController@delete')->middleware('auth');
 //Individuales
-Route::get('/user/{id}', 'UserController@index');
-Route::get('/post/{id}', 'UnPostController@index');
+Route::get('/user/{id}', 'UserController@index')->middleware('auth');
+Route::get('/post/{id}', 'UnPostController@index')->middleware('auth');
 //Crear
-Route::get('/crearPost','PostController@create');
-Route::post('/crearPost','PostController@store');
-Route::post('/message','MessageController@store');
+Route::get('/crearPost','PostController@create')->middleware('auth');
+Route::post('/crearPost','PostController@store')->middleware('auth');
+Route::post('/message','MessageController@store')->middleware('auth');
 //Editar
-Route::post('/edit','UnPostController@store')
+Route::post('/edit','UnPostController@store')->middleware('auth');
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::resource('/home', 'HomeController@index');
-});
+// Route::group(['middleware' => 'auth'], function () {
+//    Route::resource('/home', 'HomeController@index')->middleware('auth');
+// });

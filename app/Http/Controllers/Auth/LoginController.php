@@ -30,7 +30,7 @@ class LoginController extends Controller
 
     protected function authenticated() {
     	if (Auth::check()) {
-    		return redirect()->route('/home');
+    		return redirect()->route('home');
     	}
     }
 

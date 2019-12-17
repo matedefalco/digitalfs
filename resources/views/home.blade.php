@@ -44,11 +44,11 @@
 
             {{-- si estas logueado --}}
             @if($post->user->id == Auth::user()->id)
-            <a href="/edit" style="width:12.5%">
+            <a href="/edit/{{$post->id}}" style="width:12.5%">
               <i class="las la-edit fa-2x" style="width:100%"></i>
             </a>
 
-            <a href="/destroy" style="width:12.5%">
+            <a href="/destroy/{{$post->id}}" style="width:12.5%">
               <i class="las la-trash-alt fa-2x" style="width:100%"></i>>
             </a>
 

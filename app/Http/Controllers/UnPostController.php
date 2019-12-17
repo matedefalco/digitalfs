@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
+use Auth;
 
 class UnPostController extends Controller {
 
@@ -39,7 +40,7 @@ class UnPostController extends Controller {
      */
     public function store(Request $request)
     {
-
+      
     }
 
     /**
@@ -63,7 +64,7 @@ class UnPostController extends Controller {
      */
     public function edit($id)
     {
-        //
+        return view('edit');
     }
 
     /**
@@ -86,7 +87,9 @@ class UnPostController extends Controller {
      */
     public function destroy($id)
     {
-      
+      $post = Post::find($id);
+      $post->destroy();
+      redirect('/');
     }
 
     // Likes
