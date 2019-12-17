@@ -67,4 +67,8 @@ class HomeController extends Controller
     public function storage(){
 
     }
+
+    public function show(){
+      return view('welcome');
+    }
 }

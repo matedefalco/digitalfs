@@ -42,13 +42,18 @@
               <i class="likesitem la la-thumbs-down fa-2x" style="width:100%"></i>
             </a>
 
-            <a href="#" style="width:12.5%">
-              <i class="likesitem la la-share fa-2x" style="width:100%"></i>
+            {{-- si estas logueado --}}
+            @if($post->user->id == Auth::user()->id)
+            <a href="/edit" style="width:12.5%">
+              <i class="las la-edit fa-2x" style="width:100%"></i>
             </a>
 
-            <a href="#" style="width:12.5%">
-              <i class="likesitem la la-ellipsis-v fa-2x" style="width:100%"></i>
+            <a href="/destroy" style="width:12.5%">
+              <i class="las la-trash-alt fa-2x" style="width:100%"></i>>
             </a>
+
+          @endif
+
           </div>
 
         </article>
@@ -62,7 +67,7 @@
           <img class="user_img_column" src="/storage/avatar_img/{{$user->avatar}}"alt="user img">
         </div>
         <div class="nameColumn col-7">
-          <a class="usernameColumn" href="/user/{{$id}}"{{$user->name}}</a>
+          <a class="usernameColumn" href="/user/{{$id}}">{{$user->name}}</a>
         </div>
       </div>
       <div class="extrasColumn row">
@@ -76,7 +81,4 @@
     <div class="pageButtonDiv justify-content-center row">
       <a href="/api/page/1" class="pagebutton justify-content-center col-sm-12 col-m-6 col-lg-4 d-flex btn btn-outline-success">Load More</a>
     </div>
-    <br>
-    <br>
-    <br>
 @endsection

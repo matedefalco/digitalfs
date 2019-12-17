@@ -19,9 +19,12 @@ Auth::routes();
 
 Route::post('/postear', 'PostController@store');
 //Vistas
-Route::get('/', 'HomeController@index')->name("/home");
+Route::get('/','HomeController@show');
+Route::get('/inicio', 'HomeController@index')->name("/home");
 Route::get('/post','PostController@index');
 Route::get('/message','MessageController@index');
+Route::get('/edit','UnPostController@edit');
+Route::get('/destroy','UnPostController@delete');
 //Individuales
 Route::get('/user/{id}', 'UserController@index');
 Route::get('/post/{id}', 'UnPostController@index');
@@ -29,6 +32,8 @@ Route::get('/post/{id}', 'UnPostController@index');
 Route::get('/crearPost','PostController@create');
 Route::post('/crearPost','PostController@store');
 Route::post('/message','MessageController@store');
+//Editar
+Route::post('/edit','UnPostController@store')
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('/home', 'HomeController@index');

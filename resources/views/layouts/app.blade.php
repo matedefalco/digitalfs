@@ -81,7 +81,7 @@
         </div>
       <main/>
       <footer class="bottom_nav container col-12" align="center">
-        <a href="/"><i class="barra las la-igloo fa-3x col-2"></i></a>
+        <a href="/inicio"><i class="barra las la-igloo fa-3x col-2"></i></a>
         <a href="#"><i class="la la-camera fa-3x col-2"></i></a>
         <a href="/crearPost"><i class="barra la la-plus fa-3x col-2"></i></a>
         <a href="/message"><i class="barra fas fa-comments fa-3x col-2"></i></a>
