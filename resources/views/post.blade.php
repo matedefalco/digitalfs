@@ -33,20 +33,26 @@
     <button class="btn btn-primary" type="submit" name="button">Comment</button>
     </form>
 
-    <br>
-
     <div class="comments col-8">
       @foreach($comments as $comment)
         <div class="row">
+
+          {{-- Avatar --}}
           <div class="avatarContainer col-2">
             <img class="user_img" src="/storage/avatar_img/{{$comment->user->avatar}}"alt="user img">
           </div>
+
+          {{-- Username --}}
           <div class="namecontainer col-3">
             <a class="username" href="/user/{{$comment->user->id}}">{{$comment->user->name}}</a>
           </div>
-          <div class="col-7">
+
+            <br>
+            {{-- Comentario --}}
+          <div class="row col-7">
             {{$comment->comment}}
           </div>
+
         </div>
         <br>
       @endforeach
