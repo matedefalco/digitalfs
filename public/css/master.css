@@ -48,6 +48,9 @@ body {
   overflow: hidden;
   position: relative;
   width:100%;
+}
+
+.container img{
   max-width: 50%;
 }
 
