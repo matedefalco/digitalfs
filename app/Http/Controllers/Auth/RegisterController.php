@@ -66,7 +66,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
       // dd($_FILES);
-      ImageOptimizer::optimize($data['avatar']);
+      // ImageOptimizer::optimize($data['avatar']);
        $path = $data['avatar']->store("public/avatar_img");
        $nombreAvatar = basename($path);
         return User::create([
