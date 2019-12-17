@@ -73,7 +73,7 @@ class UnPostController extends Controller {
     public function update(Request $request)
     {
       $post = Post::find($request->id);
-      dd($post);
+      // dd($post);
       $post->description = $request->description;
 
 
