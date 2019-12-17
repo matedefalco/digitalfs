@@ -91,7 +91,7 @@ class UnPostController extends Controller {
     public function destroy($id)
     {
       $post = Post::find($id);
-      dd($post);
+      // dd($post);
       $post->delete();
       return redirect('/inicio');
     }
