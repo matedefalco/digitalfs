@@ -9,12 +9,12 @@
 
 <?php $count = 0; ?>
 
-  <section class='feed row align-items-center'>
+  <section class='feed row align-middle align-items-center'>
 
     @forelse ($posts as $post)
 
       <?php if($count == 0){ ?>
-        <div class='align-middle usercontainer col-12'>
+        <div class='usercontainer col-12'>
           <div class="row">
             <div class="avatarContainer col-3">
               <img class="user_img" src="/storage/avatar_img/{{$post->user->avatar}}"alt="user img">
