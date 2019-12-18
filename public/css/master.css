@@ -43,7 +43,7 @@ body {
 
 /* Welcome */
 .welcomeMaster{
-  background-image: image('/public/images');
+  background-image: url('/images');
 }
 
 .welcome1{
