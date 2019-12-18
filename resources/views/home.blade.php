@@ -19,6 +19,7 @@
       @foreach($posts as $post)
         <article class='post col-12'>
 
+          {{-- User Container --}}
           <div class="userContainer row">
             <div class="avatarContainer col-2">
               <img class="user_img" src="/storage/avatar_img/{{$post->user->avatar}}"alt="user img">
@@ -28,12 +29,14 @@
             </div>
           </div>
 
+          {{-- Image Container --}}
           <div class="mainImageContainer">
             <a href="/post/{{$post->id}}">
               <img src="/storage/post_img/{{$post->img}}" class="main_img" alt="main image">
             </a>
           </div>
 
+          {{-- Likes Container --}}
           <div class="likesContainer row">
             <a href="#" style="width:12.5%">
               <i class="likesitem la la-thumbs-up fa-2x" style="width:100%"></i>
@@ -50,13 +53,18 @@
             </a>
 
             <a href="/destroy/{{$post->id}}" style="width:12.5%">
-              <i class="las la-trash-alt fa-2x" style="width:100%"></i>>
+              <i class="las la-trash-alt fa-2x" style="width:100%"></i>
             </a>
 
           @endif
-
           </div>
 
+          {{-- Description Container --}}
+          <div class="descriptionContainer">
+            <p>{{$post->description}}</p>
+          </div>
+
+          </div>
         </article>
       @endforeach
     </div>
