@@ -8,7 +8,7 @@ verMas.onclick = function(e){
     return response.json();
   })
   .then(function (data){
-    var part1 = `<div class="row">
+    var part1 = `<div class="comment row">
       <div class="avatarContainer col-2">`;
     var part3 = `</div>
     <div class="namecontainer col-5">`;
@@ -18,7 +18,7 @@ verMas.onclick = function(e){
   </div>
   <br>`;
     console.log(part1);
-    for(var i = 0; i < data.users.name.length; i++)
+    for(var i = 1; i < data.users.name.length; i++)
     {
       var part2_1 = `<img class="user_img" src="/storage/avatar_img/`;
       var part2_2 = data.users.avatar[i];

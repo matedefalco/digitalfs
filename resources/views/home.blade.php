@@ -61,7 +61,7 @@
 
           {{-- Description Container --}}
           <div class="descriptionContainer">
-            <p class="desc">{{$post->description}}</p>
+            <p class="desc">Description: {{$post->description}}</p>
           </div>
 
         </article>
@@ -89,4 +89,8 @@
     <div class="pageButtonDiv justify-content-center row">
       <a href="/api/page/1" class="pagebutton justify-content-center col-sm-12 col-m-6 col-lg-4 d-flex btn btn-outline-success">Load More</a>
     </div>
+
+    <br>
+    <br>
+    <br>
 @endsection

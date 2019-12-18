@@ -10,7 +10,7 @@
 
   <script src="/js/comments.js" charset="utf-8"></script>
 
-  <section class='feed row align-items-center'>
+  <section class='feed  row '>
     <article class='post col-8' >
 
       {{-- User Container --}}
@@ -39,16 +39,18 @@
         </div>
     </article>
 
-    <form class="formComments" action="/comment" method="post">
-    @csrf
-    <input type="hidden" name="id" value="{{$post->id}}">
-    <input type="text" name="comment" value="" placeholder="Write here">
-    <button class="btn btn-primary" type="submit" name="button">Comment</button>
-    </form>
+    <div class="commentBox col-8 text-center">
+      <form class="formComments"  action="/comment" method="post">
+      @csrf
+      <input type="hidden" name="id" value="{{$post->id}}">
+      <input type="text" name="comment" value="" placeholder="Write here">
+      <button class="btn btn-primary" type="submit" name="button">Comment</button>
+      </form>
+    </div>
 
     <div class="comments col-8">
       @foreach($comments as $comment)
-        <div class="row">
+        <div class="comment row">
 
           {{-- Avatar --}}
           <div class="avatarContainer col-2">
@@ -71,6 +73,14 @@
 
       <a href="/api/comment/post/{{$outputarray}}/{{$offset}}" class="verMas">More comments</a>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
   </section>
 
 

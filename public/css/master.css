@@ -279,9 +279,16 @@ text-align: justify;
   border: solid 1px #dedede;
   border-radius: 1%;
   padding: 0;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   background-color: #fafafa;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.commentBox{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color:#fafafa;
+  margin-bottom: 2%;
+  padding: 1%;
 }
 
 .up, .down, .share, .options{
