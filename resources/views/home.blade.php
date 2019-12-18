@@ -60,9 +60,9 @@
           </div>
 
           {{-- Description Container --}}
-          {{-- <div class="descriptionContainer">
+          <div class="descriptionContainer">
             <p>{{$post->description}}</p>
-          </div> --}}
+          </div>
 
           </div>
         </article>
