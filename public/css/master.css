@@ -59,6 +59,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Description */
+.desc{
+  margin-left: 1%;
+}
+
 /* Comments */
 .formComments{
   margin-bottom: 3px;
