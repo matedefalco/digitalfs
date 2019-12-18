@@ -97,7 +97,7 @@
         <a href="#"><i class="la la-camera fa-3x col-2"></i></a>
         <a href="/crearPost"><i class="barra la la-plus fa-3x col-2"></i></a>
         <a href="/message"><i class="barra fas fa-comments fa-3x col-2"></i></a>
-        <a href="/user/"{{Auth::id()}}><i class="barra la la-user-circle fa-3x col-2"></i></a>
+        <a href="/user/{{Auth::id()}}"><i class="barra la la-user-circle fa-3x col-2"></i></a>
       </footer>
     </div>
 </body>
