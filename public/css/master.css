@@ -21,6 +21,9 @@ html {
 body {
   height: 100%;
   font-family: 'Ubuntu','Gelasio', sans-serif;
+  display: grid
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
 }
 
 .hometitle{
@@ -39,7 +42,20 @@ body {
 }
 
 /* Welcome */
-.welcome{
+.welcomeMaster{
+  /* background-image: url('../images/download.jpeg'); */
+}
+
+.welcome1{
+  font-family: 'Lilita One', cursive;
+}
+
+.welcome2{
+  font-family: 'Roboto', sans-serif;
+}
+
+.welcome3{
+  margin-bottom: 3px;
   font-family: 'Roboto', sans-serif;
 }
 <<<<<<< HEAD
@@ -63,6 +79,16 @@ body {
     transition: all .2s ease;
   }
 >>>>>>> parent of 2b92acb... asdasdas
+
+/* Description */
+.desc{
+  margin-left: 1%;
+}
+
+/* Comments */
+.formComments{
+  margin-bottom: 3px;
+}
 
 /* MESSAGES */
 /* Chat containers */
@@ -412,9 +438,9 @@ a, a:hover, a:focus, a:active {
     width: 17.5%;
   }
 
-  .bottom_nav{
+  /* .bottom_nav{
     display: none;
-  }
+  } */
 
   .container-fluid{
     width: 52%;
@@ -437,9 +463,9 @@ a, a:hover, a:focus, a:active {
     width: 12.5%;
   }
 
-  .bottom_nav{
+  /* .bottom_nav{
     display: none;
-  }
+  } */
 
   .container-fluid{
     width: 52%;
