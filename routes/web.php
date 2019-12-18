@@ -14,6 +14,8 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+use Illuminate\Support\Facades\Input;
+use App\User;
 
 Auth::routes();
 
@@ -36,6 +38,16 @@ Route::post('/comment','CommentController@store')->middleware('auth');
 
 //Editar
 Route::post('/edit','UnPostController@update')->middleware('auth');
+
+//buscar
+Route::any ( '/search', function () {
+    $q = Input::get ( 'q' );
+    $user = User::where ( 'name', 'LIKE', '%' . $q . '%' )->orWhere ( 'email', 'LIKE', '%' . $q . '%' )->get ();
+    if (count ( $user ) > 0)
+        return view ( 'search' )->withDetails ( $user )->withQuery ( $q );
+    else
+        return view ( 'search' )->withMessage ( 'No Details found. Try to search again !' );
+} );
 
 // Route::group(['middleware' => 'auth'], function () {
 //    Route::resource('/home', 'HomeController@index')->middleware('auth');

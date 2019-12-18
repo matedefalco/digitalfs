@@ -30,6 +30,19 @@
               <a class="navbar-brand hometitle"href="/">
                   <img class="hometitleimage" src="/storage/logo/lentilogo.png" alt="home title image">
               </a>
+
+              <form action="/search" method="POST" role="search">
+              {{ csrf_field() }}
+              <div class="input-group">
+                  <input type="text" class="form-control" name="q"
+                      placeholder="Search users"> <span class="input-group-btn">
+                      <button type="submit" class="btn btn-warning">
+                          <span class="glyphicon glyphicon-searc">Search!</span>
+                      </button>
+                  </span>
+              </div>
+              </form>
+
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                   <span class="navbar-toggler-icon"></span>
               </button>
