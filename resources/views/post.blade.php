@@ -35,7 +35,7 @@
 
         {{-- Description Container --}}
         <div class="descriptionContainer">
-          <p>{{$post->description}}</p>
+          <p>Description: {{$post->description}}</p>
         </div>
     </article>
 

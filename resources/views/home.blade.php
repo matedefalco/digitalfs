@@ -69,7 +69,7 @@
     </div>
 
     @if($authed == true)
-    <div class="column col-m-4 col-lg-4">
+    <div class="column col-m-4 col-lg-3">
       <div class="userColumn row">
         <div class="avatarColumn col-5">
           <img class="user_img_column" src="/storage/avatar_img/{{$user->avatar}}"alt="user img">
@@ -81,7 +81,15 @@
       <div class="extrasColumn row">
 
       </div>
+      <div class="side_nav container col-12" align="center">
+        <a href="/inicio"><i class="barra las la-igloo fa-2x col-2"></i></a>
+        <a href="#"><i class="la la-camera fa-2x col-2"></i></a>
+        <a href="/crearPost"><i class="barra la la-plus fa-2x col-2"></i></a>
+        <a href="/message"><i class="barra fas fa-comments fa-2x col-2"></i></a>
+        <a href="/user/"{{Auth::id()}}><i class="barra la la-user-circle fa-2x col-2"></i></a>
+      </div>
     </div>
+
     @endif
 
   </section>
@@ -90,7 +98,6 @@
       <a href="/api/page/1" class="pagebutton justify-content-center col-sm-12 col-m-6 col-lg-4 d-flex btn btn-outline-success">Load More</a>
     </div>
 
-    <br>
     <br>
     <br>
 @endsection
