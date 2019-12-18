@@ -56,7 +56,7 @@
               <i class="las la-trash-alt fa-2x" style="width:100%"></i>
             </a>
 
-          @endif
+            @endif
           </div>
 
           {{-- Description Container --}}
@@ -64,7 +64,6 @@
             <p class="desc">{{$post->description}}</p>
           </div>
 
-          </div>
         </article>
       @endforeach
     </div>
