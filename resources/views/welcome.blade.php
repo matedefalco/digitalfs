@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-      <div class="content">
+      <div class="welcomeMaster content">
           <div class="title m-b-md">
             <h1 class="welcome1 text-justify">WELCOME TO LENTI</h1>
             <h2 class="welcome2">A website for photographers to show their art</h2>

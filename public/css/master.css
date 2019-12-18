@@ -42,6 +42,10 @@ body {
 }
 
 /* Welcome */
+.welcomeMaster{
+  background-image: image('/public/images');
+}
+
 .welcome1{
   font-family: 'Lilita One', cursive;
 }
